@@ -1,0 +1,166 @@
+  /* General Styles */
+  body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+  }
+
+  header {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  /* Brand Section Styles */
+  .brand {
+    overflow: hidden;
+    /* Prevents content from overflowing */
+    padding: 1rem;
+    /* Adds some breathing space */
+    margin-bottom: 2rem;
+  }
+
+  .brand-logo {
+    display: block;
+    margin: 0 auto 2rem auto;
+    width: 15rem;
+    height: auto;
+  }
+
+  .brand h2 {
+    color: #1E3A5F;
+    text-align: center;
+  }
+
+  .brand article {
+    width: 100%;
+    /* Ensures full width on small screens */
+    margin-bottom: 2rem;
+    /* Adds space between articles */
+  }
+
+  nav ul li a.active {
+    font-weight: bold;
+    color: #FFD700;
+    /* Gold */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Light highlight */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  /* Instrument Styles */
+  #gibson,
+  #taylor {
+    background-color: rgb(182, 178, 178);
+    color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #martin {
+    background-color: lightsteelblue;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #dove,
+  #sj200,
+  #d50,
+  #j16e,
+  #T815e,
+  #T855e {
+    background-color: rgb(221, 212, 212);
+    border: 10px groove gray;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  /* Carousel Styles */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .carousel img.active {
+    display: block;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 11;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  /* Paragraph Styles */
+  p {
+    text-align: left;
+    padding: 1.5rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  /* Media Queries */
+  @media (min-width: 600px) {
+    nav ul {
+      justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .brand {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .brand article {
+      width: 48%;
+      margin-bottom: 3rem;
+    }
+  }

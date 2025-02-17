@@ -1,0 +1,94 @@
+@media (min-width: 600px) {
+
+  .logo {
+    width: 150px;
+    /* Adjust size as needed */
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    /* Space between logo and h1 */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-family: charm;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    /* Arrange horizontally */
+    position: static;
+    /* Remove absolute positioning */
+    width: auto;
+    /* Reset width */
+    background-color: transparent;
+    /* Remove background color */
+    box-shadow: none;
+    /* Remove shadow */
+  }
+
+  nav ul li {
+    margin: 0 0.5rem;
+    /* Adjust spacing */
+    text-align: left;
+    /* Align to the left */
+    border-bottom: none;
+    /* Remove separators */
+    padding: 0;
+  }
+
+  #menu-btn {
+    display: none;
+    /* Hide the button */
+  }
+
+  .carousel-container {
+    height: 60vh;
+    /* Slightly taller for medium screens */
+  }
+
+  .hero-button {
+    position: absolute;
+    /* This keeps the button fixed inside the carousel */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Perfect center alignment */
+    background-color: rgba(30, 58, 95, 0.85);
+    /* Matches your header color with transparency */
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Charm', cursive;
+    /* Artistic font for headers */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Soft shadow for depth */
+    z-index: 100;
+    /* Ensure it stays above the images but below nav if needed */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .brand-logos img {
+    width: 75px;
+    /* Adjust logo size as needed */
+    height: auto;
+    margin: 0 10px;
+    /* Space between logos */
+    transition: transform 0.3s ease;
+  }
+
+  .brand-logo {
+    width: 17rem;
+    height: auto;
+  }
+
+}
