@@ -26,7 +26,6 @@
 
   .brand-logo {
     display: block;
-    margin: 0 auto 2rem auto;
     width: 15rem;
     height: auto;
   }
@@ -152,15 +151,4 @@
     }
   }
 
-  @media (min-width: 1024px) {
-    .brand {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .brand article {
-      width: 48%;
-      margin-bottom: 3rem;
-    }
-  }
+  @media (min-width: 1024px) {}

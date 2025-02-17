@@ -291,7 +291,7 @@
  }
 
  /* Media Queries */
- @media (max-width: 767px) {
+ @media (max-width: 600px) {
    .logo-container {
      flex-direction: row;
      align-items: center;
