@@ -39,7 +39,7 @@
 
  #gibson,
  #taylor {
-   background-color: rgb(182, 178, 178);
+   background-color: lightsteelblue;
    color: black;
    border-radius: 10px;
    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -48,7 +48,7 @@
  }
 
  #martin {
-   background-color: lightsteelblue;
+   background-color: rgb(182, 178, 178);
    color: black;
    border-radius: 10px;
    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
