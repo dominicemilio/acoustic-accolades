@@ -87,8 +87,11 @@
   }
 
   .brand-logo {
-    width: 17rem;
+    width: 10rem;
     height: auto;
   }
 
+  #taylor-logo {
+    width: 8rem;
+  }
 }

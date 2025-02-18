@@ -119,6 +119,10 @@ main {
   display: none;
 }
 
+#taylor-logo {
+  width: 4rem;
+}
+
 p {
   text-align: left;
   padding: 1.5rem;
