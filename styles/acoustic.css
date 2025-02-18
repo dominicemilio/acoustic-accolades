@@ -23,8 +23,8 @@ main {
 .brand-logo {
   display: block;
   margin: 0 auto 2rem auto;
-  width: 10rem;
-  height: 10rem;
+  width: 6rem;
+
 }
 
 .brand h2 {
@@ -117,10 +117,6 @@ main {
 
 .carousel-indicators {
   display: none;
-}
-
-#taylor-logo {
-  width: 4rem;
 }
 
 p {
