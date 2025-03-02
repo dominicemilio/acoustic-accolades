@@ -46,41 +46,64 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Function to apply zebra striping to table headers
-  function updateTableHeaders(darkModeEnabled) {
-    const tableHeaders = document.querySelectorAll('.pricing-container-acoustic table thead tr th');
+  // Function to apply dark mode to the entire table
+  function updateTable(tableSelector, darkModeEnabled) {
+    // Target the specific table
+    const table = document.querySelector(tableSelector);
 
-    tableHeaders.forEach((header, index) => {
+    if (!table) return; // Exit if table not found
+
+    // Apply styles to the table itself
+    if (darkModeEnabled) {
+      table.style.color = 'white';
+      table.style.borderColor = '#555';
+    } else {
+      table.style.color = '';
+      table.style.borderColor = '';
+    }
+
+    // Style the headers
+    const headers = table.querySelectorAll('thead th');
+    headers.forEach((header, index) => {
       if (darkModeEnabled) {
         header.style.backgroundColor = index % 2 === 0 ? '#333' : '#444';
         header.style.color = 'white';
+        header.style.borderColor = '#555';
       } else {
         header.style.backgroundColor = '';
         header.style.color = '';
+        header.style.borderColor = '';
       }
     });
-  }
 
-  // Function to apply zebra striping to table rows and cells
-  function updateTableRows(darkModeEnabled) {
-    const tableRows = document.querySelectorAll('.pricing-container-acoustic table tbody tr');
+    // Style the rows with zebra striping
+    const rows = table.querySelectorAll('tbody tr');
+    rows.forEach((row, rowIndex) => {
+      const rowColor = darkModeEnabled ? (rowIndex % 2 === 0 ? '#333' : '#444') : '';
+      row.style.backgroundColor = rowColor;
 
-    tableRows.forEach((row, rowIndex) => {
+      // Style each cell in the row
       const cells = row.querySelectorAll('td');
-      cells.forEach((cell, cellIndex) => {
+      cells.forEach(cell => {
         if (darkModeEnabled) {
-          // Zebra striping for rows
-          row.style.backgroundColor = rowIndex % 2 === 0 ? '#333' : '#444';
-          // Zebra striping for cells (alternating within row)
-          cell.style.backgroundColor = cellIndex % 2 === 0 ? '#444' : '#333';
+          cell.style.backgroundColor = rowColor;
           cell.style.color = 'white';
+          cell.style.borderColor = '#555';
         } else {
-          row.style.backgroundColor = '';
           cell.style.backgroundColor = '';
           cell.style.color = '';
+          cell.style.borderColor = '';
         }
       });
     });
+  }
+
+  // Function to apply dark mode to all tables that can be called after data is loaded
+  function applyDarkModeToTables() {
+    if (document.body.classList.contains("dark-mode")) {
+      updateTable('.pricing-container-acoustic table', true);
+      updateTable('.pricing-container-classical table', true);
+    }
   }
 
   // Apply dark mode if previously selected
@@ -89,13 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
     darkModeBtn.textContent = "☀️ Light Mode";
     updateLogoVisibility(true);
     updateElementStyles(true);
-    updateTableHeaders(true);
-    updateTableRows(true);
+    updateTable('.pricing-container-acoustic table', true);
+    updateTable('.pricing-container-classical table', true);
   } else {
     updateLogoVisibility(false);
     updateElementStyles(false);
-    updateTableHeaders(false);
-    updateTableRows(false);
+    updateTable('.pricing-container-acoustic table', false);
+    updateTable('.pricing-container-classical table', false);
   }
 
   // Toggle Dark Mode
@@ -108,15 +131,21 @@ document.addEventListener("DOMContentLoaded", () => {
       darkModeBtn.textContent = "☀️ Light Mode";
       updateLogoVisibility(true);
       updateElementStyles(true);
-      updateTableHeaders(true);
-      updateTableRows(true);
+      updateTable('.pricing-container-acoustic table', true);
+      updateTable('.pricing-container-classical table', true);
     } else {
       localStorage.setItem("darkMode", "disabled");
       darkModeBtn.textContent = "🌙 Dark Mode";
       updateLogoVisibility(false);
       updateElementStyles(false);
-      updateTableHeaders(false);
-      updateTableRows(false);
+      updateTable('.pricing-container-acoustic table', false);
+      updateTable('.pricing-container-classical table', false);
     }
   });
+
+  // Add event listener to ensure table styling is applied after data is loaded
+  window.addEventListener('load', applyDarkModeToTables);
+
+  // Expose this function globally if needed:
+  window.applyDarkModeToTables = applyDarkModeToTables;
 });
