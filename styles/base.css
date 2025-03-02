@@ -368,6 +368,119 @@
    filter: brightness(0.8);
  }
 
+ /* Add this to your base.css file */
+
+ /* Weather Alert */
+ .weather-alert {
+   background-color: #1E3A5F;
+   color: white;
+   padding: 15px;
+   text-align: center;
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .weather-alert p {
+   margin: 0;
+   font-size: 1rem;
+ }
+
+ #close-alert {
+   background: none;
+   border: none;
+   color: rgb(0, 0, 0);
+   font-size: 1.5rem;
+   cursor: pointer;
+   position: absolute;
+   right: 15px;
+   top: 50%;
+   transform: translateY(-50%);
+ }
+
+ .weather-alert {
+   background-color: #d8a12b;
+   color: rgb(0, 0, 0);
+   font-weight: bold;
+   font-size: larger;
+   padding: 15px;
+   text-align: center;
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .weather-section {
+   padding: 2rem 1rem;
+   text-align: center;
+   background-color: #f5f5f5;
+   margin: 2rem 0;
+ }
+
+ .weather-section h2 {
+   color: #1E3A5F;
+   margin-bottom: 1.5rem;
+   font-family: 'Charm', cursive;
+ }
+
+ .weather-container {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   max-width: 800px;
+   margin: 0 auto;
+ }
+
+ .current-weather,
+ .forecast {
+   background-color: white;
+   border-radius: 10px;
+   padding: 1.5rem;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .weather-info {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .weather-conditions-item {
+   display: flex;
+   align-items: center;
+   margin: 10px 0;
+ }
+
+ .weather-icon {
+   width: 50px;
+   height: 50px;
+   margin-right: 15px;
+ }
+
+ /* Dark mode styles */
+ .dark-mode .weather-section {
+   background-color: #252525;
+ }
+
+ .dark-mode .weather-section h2 {
+   color: #FFD700;
+ }
+
+ .dark-mode .current-weather,
+ .dark-mode .forecast {
+   background-color: #333;
+   color: #e0e0e0;
+ }
+
+ .dark-mode .weather-alert {
+   background-color: #d8a12b;
+   color: rgb(0, 0, 0);
+ }
+
  @media (max-width: 600px) {
    .logo-container {
      flex-direction: row;
@@ -396,5 +509,15 @@
      font-size: 12px;
      font-weight: bold;
      margin-left: 5px;
+   }
+
+   .weather-container {
+     flex-direction: row;
+     align-items: stretch;
+   }
+
+   .current-weather,
+   .forecast {
+     flex: 1;
    }
  }
