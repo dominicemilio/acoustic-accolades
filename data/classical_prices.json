@@ -1,0 +1,59 @@
+{
+  "guitars": [
+    {
+      "brand": "Cordoba",
+      "model": "Friederich",
+      "type": "Classical 6-string",
+      "purchase_price": 3899,
+      "rental": {
+        "full_day": 55,
+        "weekly": 330,
+        "monthly": 1100
+      }
+    },
+    {
+      "brand": "Ramirez",
+      "model": "Centenario",
+      "type": "Classical 6-string",
+      "purchase_price": 5199,
+      "rental": {
+        "full_day": 70,
+        "weekly": 420,
+        "monthly": 1400
+      }
+    },
+    {
+      "brand": "Ramirez",
+      "model": "Legado",
+      "type": "Classical 6-string",
+      "purchase_price": 29999,
+      "rental": {
+        "full_day": 410,
+        "weekly": 2460,
+        "monthly": 8200
+      }
+    },
+    {
+      "brand": "Takamine",
+      "model": "GC5-NAT",
+      "type": "Classical 6-string",
+      "purchase_price": 1199,
+      "rental": {
+        "full_day": 30,
+        "weekly": 180,
+        "monthly": 600
+      }
+    },
+    {
+      "brand": "Takamine",
+      "model": "GC6E-NAT",
+      "type": "Classical 6-string",
+      "purchase_price": 1699,
+      "rental": {
+        "full_day": 35,
+        "weekly": 210,
+        "monthly": 700
+      }
+    }
+  ]
+}
