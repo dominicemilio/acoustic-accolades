@@ -2,6 +2,17 @@
   "guitars": [
     {
       "brand": "Cordoba",
+      "model": "Esteso",
+      "type": "Classical 6-string",
+      "purchase_price": 2999,
+      "rental": {
+        "full_day": 40,
+        "weekly": 240,
+        "monthly": 800
+      }
+    },
+    {
+      "brand": "Cordoba",
       "model": "Friederich",
       "type": "Classical 6-string",
       "purchase_price": 3899,
