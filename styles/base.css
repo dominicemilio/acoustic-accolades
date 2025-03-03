@@ -128,8 +128,14 @@
  }
 
  .slide {
-   min-width: 100%;
-   box-sizing: border-box;
+   flex: 0 0 100%;
+   /* Ensures each slide takes full width */
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   /* Ensures images don't overflow */
  }
 
  .slide img {
