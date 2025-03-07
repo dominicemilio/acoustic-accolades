@@ -1,77 +1,401 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dominic Emilio Clemence | Final Project - Acoustic Accolades | WDD230 Web Frontend Development</title>
-  <meta name="author" content="Dominic Emilio Clemence">
-  <meta name="description"
-    content="This is not a real website, it is an assignment by Dominic Emilio Clemence for the WDD 230 - Web Frontend Development course at BYU-Idaho.">
-  <meta property="og:title" content="Acoustic Accolades | WDD230">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://dominicemilio.github.io/acoustic-accolades/images/acoustic-accolades.png">
-  <meta property="og:url" content="https://dominicemilio.github.io/acoustic-accolades/">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 600px)">
-  <link rel="stylesheet" href="styles/larger.css" media="(min-width: 1024px)">
-  <link rel="stylesheet" href="styles/darkmode.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <title>Guitar Rental Reservations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f8f8f8;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    select {
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .guitar-details {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f8f8f8;
+      border-radius: 4px;
+      display: none;
+    }
+
+    .guitar-details h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .guitar-details ul {
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <div class="logo-container">
-      <img class="logo" src="images/logo.png" alt="Guitar Logo">
-      <h1>Acoustic Accolades</h1>
-    </div>
-
-    <nav>
-      <button id="menu-btn">&#9776;</button>
-      <ul id="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="acoustic.html">Acoustic</a></li>
-        <li><a href="classical.html">Classical</a></li>
-        <li><a href="reservations.html" class="active">Reservations</a></li>
+  <div class="container">
+    <div class="card">
+      <h2>Guitar Rental Services and Agreements</h2>
+      <ul>
+        <li>A $50 security deposit is required to confirm reservations.</li>
+        <li>A valid government-issued ID is required at the time of rental.</li>
+        <li>Renters must be at least 18 years old to rent a guitar.</li>
+        <li>Guitars must be returned in the same condition as received; additional fees may apply for damage beyond
+          normal wear.</li>
+        <li>Unlimited playtime during the rental period.</li>
+        <li>Basic liability coverage is included with each rental.</li>
+        <li>Damage protection plans are available for purchase.</li>
+        <li>Free delivery to hotels or Airbnbs for rentals of 2+ days.</li>
+        <li>Payment methods accepted: Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
+        <li>Guitars may be returned to either of our rental locations.</li>
       </ul>
-    </nav>
-  </header>
-  <main>
-
-  </main>
-
-  <footer>
-    <div class="footer-top">
-      <div class="our-brands">Our Brands</div>
-      <div class="brand-logos">
-        <img src="images/cordoba_logo.svg" alt="Cordoba Logo">
-        <img src="images/gibson_logo.svg" alt="Gibson Logo">
-        <img src="images/martin_logo.svg" alt="Martin Logo">
-        <img src="images/ramirez_logo.svg" alt="Ramirez Logo">
-        <img src="images/takamine-logo.png" alt="Takamine Logo">
-        <img src="images/taylor_logo.svg" alt="Taylor Logo">
-      </div>
     </div>
-    <div class="footer-bottom">
-      <div class="copyright">&copy; Acoustic Accolades Inc. All Rights Reserved</div>
-      <div class="footer-right">
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="images/facebook-icon.png" alt="Facebook" class="social-icon">
-        </a>
-        <a href="https://www.linkedin.com" target="_blank">
-          <img src="images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
-        </a>
-      </div>
-    </div>
-  </footer>
 
+    <div class="card">
+      <h2>Guitar Rental Pricing</h2>
+
+      <label for="guitar-type">Select Guitar Type:</label>
+      <select id="guitar-type" onchange="filterGuitars()">
+        <option value="all">All Guitars</option>
+        <option value="acoustic">Acoustic Guitars</option>
+        <option value="classical">Classical Guitars</option>
+      </select>
+
+      <label for="guitar-model">Select Guitar Model:</label>
+      <select id="guitar-model" onchange="showGuitarDetails()">
+        <option value="">-- Select a model --</option>
+      </select>
+
+      <div id="guitar-details" class="guitar-details"></div>
+
+      <table id="guitar-table">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Purchase Price</th>
+            <th>Daily Rental</th>
+            <th>Weekly Rental</th>
+            <th>Monthly Rental</th>
+          </tr>
+        </thead>
+        <tbody id="guitar-table-body">
+          <!-- Guitar data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // Guitar data
+    const acousticGuitars = [
+      {
+        "brand": "Gibson",
+        "model": "Dove",
+        "type": "Acoustic 6-string",
+        "purchase_price": 3499,
+        "rental": {
+          "full_day": 50,
+          "weekly": 300,
+          "monthly": 1000
+        }
+      },
+      {
+        "brand": "Gibson",
+        "model": "SJ-200",
+        "type": "Acoustic 12-string",
+        "purchase_price": 5299,
+        "rental": {
+          "full_day": 70,
+          "weekly": 420,
+          "monthly": 1400
+        }
+      },
+      {
+        "brand": "Martin",
+        "model": "D50",
+        "type": "Acoustic 6-string",
+        "purchase_price": 3999,
+        "rental": {
+          "full_day": 55,
+          "weekly": 330,
+          "monthly": 1100
+        }
+      },
+      {
+        "brand": "Martin",
+        "model": "J16e",
+        "type": "Acoustic 12-string",
+        "purchase_price": 4599,
+        "rental": {
+          "full_day": 65,
+          "weekly": 390,
+          "monthly": 1300
+        }
+      },
+      {
+        "brand": "Taylor",
+        "model": "815e",
+        "type": "Acoustic 6-string",
+        "purchase_price": 3299,
+        "rental": {
+          "full_day": 45,
+          "weekly": 270,
+          "monthly": 900
+        }
+      },
+      {
+        "brand": "Taylor",
+        "model": "855e",
+        "type": "Acoustic 12-string",
+        "purchase_price": 4699,
+        "rental": {
+          "full_day": 60,
+          "weekly": 360,
+          "monthly": 1200
+        }
+      }
+    ];
+
+    const classicalGuitars = [
+      {
+        "brand": "Cordoba",
+        "model": "Esteso",
+        "type": "Classical 6-string",
+        "purchase_price": 2999,
+        "rental": {
+          "full_day": 40,
+          "weekly": 240,
+          "monthly": 800
+        }
+      },
+      {
+        "brand": "Cordoba",
+        "model": "Friederich",
+        "type": "Classical 6-string",
+        "purchase_price": 3899,
+        "rental": {
+          "full_day": 55,
+          "weekly": 330,
+          "monthly": 1100
+        }
+      },
+      {
+        "brand": "Ramirez",
+        "model": "Centenario",
+        "type": "Classical 6-string",
+        "purchase_price": 5199,
+        "rental": {
+          "full_day": 70,
+          "weekly": 420,
+          "monthly": 1400
+        }
+      },
+      {
+        "brand": "Ramirez",
+        "model": "Legado",
+        "type": "Classical 6-string",
+        "purchase_price": 29999,
+        "rental": {
+          "full_day": 410,
+          "weekly": 2460,
+          "monthly": 8200
+        }
+      },
+      {
+        "brand": "Takamine",
+        "model": "GC5-NAT",
+        "type": "Classical 6-string",
+        "purchase_price": 1199,
+        "rental": {
+          "full_day": 30,
+          "weekly": 180,
+          "monthly": 600
+        }
+      },
+      {
+        "brand": "Takamine",
+        "model": "GC6E-NAT",
+        "type": "Classical 6-string",
+        "purchase_price": 1699,
+        "rental": {
+          "full_day": 35,
+          "weekly": 210,
+          "monthly": 700
+        }
+      }
+    ];
+
+    // Combined guitar data
+    const guitarData = {
+      guitars: [
+        ...acousticGuitars,
+        ...classicalGuitars
+      ]
+    };
+
+    // Function to populate the table with guitar data
+    function populateTable(filteredGuitars) {
+      const tableBody = document.getElementById('guitar-table-body');
+      tableBody.innerHTML = '';
+
+      filteredGuitars.forEach(guitar => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${guitar.brand}</td>
+          <td>${guitar.model}</td>
+          <td>${guitar.type}</td>
+          <td>$${guitar.purchase_price}</td>
+          <td>$${guitar.rental.full_day}</td>
+          <td>$${guitar.rental.weekly}</td>
+          <td>$${guitar.rental.monthly}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    // Function to populate the model dropdown based on the selected type
+    function populateModelDropdown(filteredGuitars) {
+      const modelSelect = document.getElementById('guitar-model');
+      // Clear all options except the first one
+      modelSelect.innerHTML = '<option value="">-- Select a model --</option>';
+
+      filteredGuitars.forEach(guitar => {
+        const option = document.createElement('option');
+        option.value = `${guitar.brand}-${guitar.model}`;
+        option.textContent = `${guitar.brand} ${guitar.model} (${guitar.type})`;
+        modelSelect.appendChild(option);
+      });
+    }
+
+    // Function to filter guitars based on the selected type
+    function filterGuitars() {
+      const guitarType = document.getElementById('guitar-type').value;
+      let filteredGuitars = [];
+
+      if (guitarType === 'all') {
+        filteredGuitars = guitarData.guitars;
+      } else if (guitarType === 'acoustic') {
+        filteredGuitars = guitarData.guitars.filter(guitar => guitar.type.includes('Acoustic'));
+      } else if (guitarType === 'classical') {
+        filteredGuitars = guitarData.guitars.filter(guitar => guitar.type.includes('Classical'));
+      }
+
+      populateTable(filteredGuitars);
+      populateModelDropdown(filteredGuitars);
+
+      // Clear the guitar details
+      document.getElementById('guitar-details').style.display = 'none';
+    }
+
+    // Function to show details for the selected guitar model
+    function showGuitarDetails() {
+      const modelValue = document.getElementById('guitar-model').value;
+      const detailsDiv = document.getElementById('guitar-details');
+
+      if (!modelValue) {
+        detailsDiv.style.display = 'none';
+        return;
+      }
+
+      const [brand, model] = modelValue.split('-');
+      const selectedGuitar = guitarData.guitars.find(
+        guitar => guitar.brand === brand && guitar.model === model
+      );
+
+      if (selectedGuitar) {
+        detailsDiv.innerHTML = `
+          <h3>${selectedGuitar.brand} ${selectedGuitar.model}</h3>
+          <p><strong>Type:</strong> ${selectedGuitar.type}</p>
+          <p><strong>Purchase Price:</strong> $${selectedGuitar.purchase_price}</p>
+          <p><strong>Rental Options:</strong></p>
+          <ul>
+            <li>Daily: $${selectedGuitar.rental.full_day}</li>
+            <li>Weekly: $${selectedGuitar.rental.weekly}</li>
+            <li>Monthly: $${selectedGuitar.rental.monthly}</li>
+          </ul>
+        `;
+        detailsDiv.style.display = 'block';
+      } else {
+        detailsDiv.style.display = 'none';
+      }
+    }
+
+    // Initialize the page when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Load all guitars initially
+      populateTable(guitarData.guitars);
+      populateModelDropdown(guitarData.guitars);
+    });
+  </script>
 </body>
-<script defer src="scripts/script.js"></script>
-<script defer src="scripts/darkmode.js"></script>
-<script defer src="scripts/weather.js"></script>
 
 </html>
