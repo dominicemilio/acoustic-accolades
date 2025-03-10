@@ -72,24 +72,65 @@
     <div class="dots" id="dots-container"></div>
     </div>
     </div>
-    <!-- Add this weather section right before the closing </main> tag -->
-    <section class="weather-section">
-      <h2>Current Weather in Cozumel</h2>
-      <div class="weather-container">
-        <div class="current-weather">
-          <div class="weather-info">
-            <h3>Current Conditions</h3>
-            <p>Temperature: <span id="current-temp"></span>°C</p>
-            <p>Humidity: <span id="current-humidity"></span>%</p>
-            <div id="weather-conditions"></div>
-          </div>
+
+    <section class="locations-container">
+      <h2>Our Guitar Shop Locations</h2>
+
+      <div class="location-cards">
+        <!-- Location 1 -->
+        <div class="location-card">
+          <h3>Playa Palancar Cozumel</h3>
+          <img src="./images/palancar.webp" alt="Playa Palancar Cozumel Store" class="location-image">
+          <p>Our beachfront guitar shop at Playa Palancar offers a serene environment to test out your ideal guitar
+            while enjoying the beautiful ocean views.</p>
+          <p>Hours: 9am-6pm Daily</p>
+          <p>Contact: (987) 123-4567</p>
         </div>
-        <div class="forecast">
-          <h3>Tomorrow's Forecast (3:00 PM)</h3>
-          <p>Temperature: <span id="forecast-temp"></span>°C</p>
+
+        <!-- Location 2 -->
+        <div class="location-card">
+          <h3>Punta Sur Eco Beach Park</h3>
+          <img src="./images/punta.webp" alt="Punta Sur Eco Beach Park Store" class="location-image">
+          <p>Our Punta Sur location is nestled in the ecological park, providing a natural backdrop for your musical
+            journey.</p>
+          <p>Hours: 10am-5pm Daily</p>
+          <p>Contact: (987) 765-4321</p>
         </div>
       </div>
-    </section>
+
+      <div class="promotional-message">
+        <p>Come and get your vacation guitar in either of our 2 locations so you can chill while playing your favorite
+          tunes. We carry Classical guitars by Cordoba, Ramirez, and Takamine. We also carry Acoustic guitars by Gibson,
+          Martin, and Taylor. You can either rent or buy, your choice!</p>
+      </div>
+
+      <div class="info-sections">
+        <section class="map-section">
+          <h3>Find Us</h3>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d119455.54258687705!2d-87.02482118457031!3d20.4502269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m4!1s0x8f4e58330a33d7b5%3A0x523a6bd3f0a2a6c0!3m2!1d20.450226899999998!2d-86.9549579!4m5!1s0x8f4e4c3cf26b1281%3A0x4bd3b392720fe483!2sPunta%20Sur%20Eco%20Beach%20Park%2C%20Carr.%20Costera%20Sur%2C%20San%20Miguel%20de%20Cozumel%2C%20Q.R.%2C%20Mexico!3m2!1d20.2899649!2d-86.9776423!5e0!3m2!1sen!2sus!4v1709665106989!5m2!1sen!2sus"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </section>
+        <section class="weather-section">
+          <h3>Current Weather in Cozumel</h3>
+          <div class="weather-container">
+            <div class="current-weather">
+              <div class="weather-info">
+                <h4>Current Conditions</h4>
+                <p>Temperature: <span id="current-temp"></span>°C</p>
+                <p>Humidity: <span id="current-humidity"></span>%</p>
+                <div id="weather-conditions"></div>
+              </div>
+            </div>
+            <div class="forecast">
+              <h4>Tomorrow's Forecast (3:00 PM)</h4>
+              <p>Temperature: <span id="forecast-temp"></span>°C</p>
+            </div>
+          </div>
+        </section>
   </main>
   <footer>
     <div class="footer-top">
