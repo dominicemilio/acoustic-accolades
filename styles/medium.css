@@ -104,7 +104,8 @@
 
   /* Put map and weather side by side */
   .info-sections {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 
   .map-section,
