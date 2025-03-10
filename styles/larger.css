@@ -14,52 +14,39 @@
 
   .carousel-container {
     height: 80vh;
-    /* Taller for large screens */
   }
 
   .logo {
     width: 200px;
-    /* Larger logo width */
   }
 
   h1 {
     font-size: 2rem;
-    /* Larger font size */
     margin-left: 5px;
   }
 
   .hero-button {
     position: absolute;
-    /* This keeps the button fixed inside the carousel */
     top: 50%;
-    /* Center vertically */
     left: 50%;
-    /* Center horizontally */
     transform: translate(-50%, -50%);
-    /* Perfect center alignment */
     background-color: rgb(180, 52, 52);
-    /* Matches your header color with transparency */
     color: white;
     font-size: 2rem;
     font-family: 'Charm', cursive;
-    /* Artistic font for headers */
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Soft shadow for depth */
     z-index: 100;
-    /* Ensure it stays above the images but below nav if needed */
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
   .brand-logos img {
     width: 100px;
-    /* Adjust logo size as needed */
     height: auto;
     margin: 0 10px;
-    /* Space between logos */
     transition: transform 0.3s ease;
   }
 
@@ -68,17 +55,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /* Ensure alignment */
   }
 
   .brand-header {
     display: flex;
     align-items: center;
-    /* Vertically center the logo */
     justify-content: center;
-    /* Horizontally center it within its container */
     width: 35%;
-    /* Adjust width as needed */
   }
 
   .brand-logo {
@@ -96,7 +79,6 @@
 
   .brand-reverse {
     flex-direction: row-reverse;
-    /* Reverse the order of the flex items */
   }
 
   .brand article {
