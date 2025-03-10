@@ -60,7 +60,7 @@
     /* Center horizontally */
     transform: translate(-50%, -50%);
     /* Perfect center alignment */
-    background-color: rgba(30, 58, 95, 0.85);
+    background-color: rgb(180, 52, 52);
     /* Matches your header color with transparency */
     color: white;
     font-size: 1.5rem;
@@ -93,5 +93,22 @@
 
   #taylor-logo {
     width: 8rem;
+  }
+
+  /* Switch to 2 columns for location cards */
+  .location-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Put map and weather side by side */
+  .info-sections {
+    flex-direction: row;
+  }
+
+  .map-section,
+  .weather-section {
+    flex: 1;
   }
 }

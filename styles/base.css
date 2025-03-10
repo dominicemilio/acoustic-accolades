@@ -188,7 +188,7 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background-color: red;
+   background-color: rgb(180, 52, 52);
    color: white;
    font-size: 1rem;
    font-family: 'Charm', cursive;
@@ -767,41 +767,4 @@
  .dark-mode .current-weather,
  .dark-mode .forecast {
    background-color: #252525;
- }
-
- /* Medium screen styles */
- @media (min-width: 600px) {
-
-   /* Switch to 2 columns for location cards */
-   .location-cards {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 2rem;
-   }
-
-   /* Put map and weather side by side */
-   .info-sections {
-     flex-direction: row;
-   }
-
-   .map-section,
-   .weather-section {
-     flex: 1;
-   }
- }
-
- /* Large screen styles */
- @media (min-width: 1024px) {
-   .locations-container {
-     padding: 2rem;
-   }
-
-   .location-card {
-     padding: 2rem;
-   }
-
-   .promotional-message {
-     padding: 3rem;
-     font-size: 1.25rem;
-   }
  }

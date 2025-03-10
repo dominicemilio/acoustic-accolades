@@ -37,7 +37,7 @@
     /* Center horizontally */
     transform: translate(-50%, -50%);
     /* Perfect center alignment */
-    background-color: rgba(30, 58, 95, 0.85);
+    background-color: rgb(180, 52, 52);
     /* Matches your header color with transparency */
     color: white;
     font-size: 2rem;
@@ -111,6 +111,19 @@
   h2 {
     font-size: 2rem;
     text-align: center;
+  }
+
+  .locations-container {
+    padding: 2rem;
+  }
+
+  .location-card {
+    padding: 2rem;
+  }
+
+  .promotional-message {
+    padding: 3rem;
+    font-size: 1.25rem;
   }
 
 }
