@@ -768,3 +768,140 @@
  .dark-mode .forecast {
    background-color: #252525;
  }
+
+ body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   margin: 0;
+   padding: 20px;
+   background-color: #f5f5f5;
+ }
+
+ .container {
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+
+ .agreement-card {
+   background-color: white;
+   border-radius: 8px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   padding: 25px;
+   margin-bottom: 30px;
+   margin-top: 30px;
+ }
+
+ .agreement-card ul {
+   list-style-type: none;
+   text-align: left;
+ }
+
+ h2 {
+   color: #333;
+   margin-top: 0;
+   border-bottom: 2px solid #eee;
+   padding-bottom: 10px;
+ }
+
+ ul {
+   padding-left: 20px;
+ }
+
+ li {
+   margin-bottom: 8px;
+ }
+
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+ }
+
+ th,
+ td {
+   padding: 12px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
+ }
+
+ th {
+   background-color: #f8f8f8;
+   font-weight: bold;
+ }
+
+ tr:hover {
+   background-color: #f5f5f5;
+ }
+
+ select {
+   padding: 10px;
+   border-radius: 4px;
+   border: 1px solid #ddd;
+   margin-bottom: 20px;
+   width: 100%;
+   max-width: 400px;
+ }
+
+ label {
+   display: block;
+   margin-top: 15px;
+   margin-bottom: 5px;
+   font-weight: bold;
+ }
+
+ .guitar-details {
+   margin-top: 20px;
+   padding: 15px;
+   background-color: #f8f8f8;
+   border-radius: 4px;
+   display: none;
+ }
+
+ .guitar-details h3 {
+   margin-top: 0;
+   color: #333;
+ }
+
+ .guitar-details ul {
+   margin-bottom: 0;
+ }
+
+ .dark-mode h2 {
+   color: #FFD700;
+ }
+
+ .dark-mode .agreement-card {
+   background-color: #333;
+   color: #e0e0e0;
+ }
+
+ .dark-mode th {
+   background-color: #252525;
+ }
+
+ .dark-mode tr:hover {
+   background-color: #333;
+ }
+
+ .dark-mode .card {
+   background-color: #333;
+   color: #e0e0e0;
+ }
+
+ .dark-mode .guitar-type {
+   color: #FFD700;
+ }
+
+ .dark-mode .guitar-model {
+   color: #FFD700;
+ }
+
+ .dark-mode .guitar-details {
+   background-color: #252525;
+   color: #e0e0e0;
+ }
+
+ .dark-mode .guitar-table {
+   background-color: #252525;
+   color: #e0e0e0;
+ }
