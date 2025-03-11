@@ -866,42 +866,153 @@
    margin-bottom: 0;
  }
 
- .dark-mode h2 {
-   color: #FFD700;
+ /* Variables for consistent theming */
+ :root {
+   --dark-bg: #121212;
+   --dark-surface: #1e1e1e;
+   --dark-surface-light: #2d2d2d;
+   --dark-text: #e0e0e0;
+   --dark-text-secondary: #a0a0a0;
+   --dark-border: #333333;
+   --dark-primary: #bb86fc;
+   --dark-primary-variant: #3700b3;
+   --dark-secondary: #03dac6;
+   --dark-error: #cf6679;
+   --dark-zebra-odd: #1a1a1a;
+   --dark-zebra-even: #252525;
+   --dark-hover: rgba(187, 134, 252, 0.15);
  }
 
- .dark-mode .agreement-card {
-   background-color: #333;
-   color: #e0e0e0;
+ /* General dark mode styles */
+ body.dark-mode {
+   background-color: var(--dark-bg);
+   color: var(--dark-text);
  }
 
- .dark-mode th {
-   background-color: #252525;
+ /* Header styles */
+ body.dark-mode header {
+   background-color: var(--dark-surface);
+   border-bottom: 1px solid var(--dark-border);
  }
 
- .dark-mode tr:hover {
-   background-color: #333;
+ body.dark-mode #bus-name {
+   color: var(--dark-primary);
  }
 
- .dark-mode .card {
-   background-color: #333;
-   color: #e0e0e0;
+ body.dark-mode nav {
+   background-color: var(--dark-surface);
  }
 
- .dark-mode .guitar-type {
-   color: #FFD700;
+ body.dark-mode #menu-btn {
+   background-color: var(--dark-surface-light);
+   color: var(--dark-text);
+   border: 1px solid var(--dark-border);
  }
 
- .dark-mode .guitar-model {
-   color: #FFD700;
+ body.dark-mode #nav-list {
+   background-color: var(--dark-surface);
  }
 
- .dark-mode .guitar-details {
-   background-color: #252525;
-   color: #e0e0e0;
+ body.dark-mode #nav-list li a {
+   color: var(--dark-text);
  }
 
- .dark-mode .guitar-table {
-   background-color: #252525;
-   color: #e0e0e0;
+ body.dark-mode #nav-list li a:hover {
+   background-color: var(--dark-surface-light);
+   color: var(--dark-primary);
+ }
+
+ body.dark-mode #nav-list li a.active {
+   background-color: var(--dark-primary-variant);
+   color: var(--dark-text);
+ }
+
+ /* Card styles */
+ body.dark-mode .card,
+ body.dark-mode .agreement-card {
+   background-color: var(--dark-surface);
+   border: 1px solid var(--dark-border);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ body.dark-mode .card h2,
+ body.dark-mode .agreement-card h2 {
+   color: var(--dark-primary);
+   border-bottom: 1px solid var(--dark-border);
+ }
+
+ body.dark-mode .agreement-card ul li {
+   color: var(--dark-text);
+ }
+
+ /* Form elements */
+ body.dark-mode select,
+ body.dark-mode label {
+   color: var(--dark-text);
+ }
+
+ body.dark-mode select {
+   background-color: var(--dark-surface-light);
+   border: 1px solid var(--dark-border);
+ }
+
+ body.dark-mode select:focus {
+   border-color: var(--dark-primary);
+   outline: none;
+ }
+
+ /* Table styles - Enhanced for dark mode */
+ body.dark-mode table {
+   border-collapse: collapse;
+   width: 100%;
+   background-color: var(--dark-surface);
+   color: var(--dark-text);
+   border: 1px solid var(--dark-border);
+ }
+
+ body.dark-mode th {
+   background-color: var(--dark-surface-light);
+   color: var(--dark-primary);
+   border: 1px solid var(--dark-border);
+   padding: 10px;
+   text-align: left;
+ }
+
+ body.dark-mode td {
+   border: 1px solid var(--dark-border);
+   padding: 8px;
+   color: var(--dark-text);
+ }
+
+ /* Zebra striping for table rows */
+ body.dark-mode tr:nth-child(odd) {
+   background-color: var(--dark-zebra-odd);
+ }
+
+ body.dark-mode tr:nth-child(even) {
+   background-color: var(--dark-zebra-even);
+ }
+
+ body.dark-mode tr:hover {
+   background-color: var(--dark-hover);
+ }
+
+ /* Table inside the card */
+ body.dark-mode .card table {
+   margin-top: 15px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+ }
+
+ /* Guitar details section */
+ body.dark-mode #guitar-details {
+   background-color: var(--dark-surface-light);
+   border: 1px solid var(--dark-border);
+ }
+
+ body.dark-mode #guitar-details h3 {
+   color: var(--dark-primary);
+ }
+
+ body.dark-mode #guitar-details strong {
+   color: var(--dark-secondary);
  }
