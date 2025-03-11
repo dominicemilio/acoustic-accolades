@@ -10,7 +10,7 @@
   --dark-text-secondary: #a0a0a0;
   --dark-border: #333333;
   --dark-primary: #bb86fc;
-  --dark-primary-variant: dark rgb(185, 132, 32);
+  --dark-primary-variant: rgb(185, 132, 32);
   --dark-secondary: #03dac6;
   --dark-error: #cf6679;
   --dark-zebra-odd: #1a1a1a;
@@ -470,7 +470,7 @@ td {
 }
 
 th {
-  background-color: #f8f8f8;
+  background-color: #4b4848;
   font-weight: bold;
 }
 
