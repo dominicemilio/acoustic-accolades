@@ -1,1003 +1,855 @@
- * {
-   box-sizing: border-box;
- }
-
- html {
-   height: 100%;
- }
-
- body {
-   font-family: 'Lato', sans-serif;
-   margin: 0;
-   padding: 0;
-   background-color: white;
-   color: black;
-   min-height: 100%;
-   display: flex;
-   flex-direction: column;
- }
-
- main {
-   flex: 1;
- }
-
- header {
-   position: relative;
-   z-index: 500;
-   display: flex;
-   justify-content: space-between;
-   align-items: flex-end;
-   padding: 1rem;
-   background-color: #1E3A5F;
-   color: white;
- }
-
- .logo-container {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
- }
-
- .logo {
-   width: 100px;
-   height: auto;
-   border-radius: 15px;
-   margin-bottom: 5px;
-   margin-left: 15px;
- }
-
- h1 {
-   font-size: 1rem;
-   font-family: charm;
-   margin-left: 10px;
-   line-height: 1.2;
- }
-
- nav ul {
-   list-style: none;
-   padding: 0;
-   padding-top: 20px;
-   border-top: 2px solid white;
-   display: none;
-   flex-direction: column;
-   background-color: #1E3A5F;
-   position: absolute;
-   top: 100%;
-   left: 0;
-   width: 100%;
-   z-index: 1;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
- }
-
- nav ul li {
-   margin: 0;
-   font-weight: 800;
-   text-align: center;
-   padding: 10px 0;
-   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
- }
-
- nav ul li:last-child {
-   border-bottom: none;
- }
-
-
- nav ul li a {
-   color: white;
-   text-decoration: none;
-   display: block;
- }
-
- nav ul.open {
-   display: flex;
-   z-index: 1000;
- }
-
- nav ul li a.active {
-   font-weight: bold;
-   color: #FFD700;
-   background-color: rgba(255, 255, 255, 0.2);
-   padding: 5px 10px;
-   border-radius: 5px;
- }
-
- #menu-btn {
-   font-size: 2rem;
-   background: none;
-   border: none;
-   color: white;
-   cursor: pointer;
- }
-
- #menu-btn.active {
-   content: '✖';
- }
-
- .carousel-container {
-   position: relative;
-   max-width: 100%;
-   height: 40vh;
-   overflow: hidden;
-   margin-bottom: 0;
-   padding-bottom: 0;
- }
-
- .carousel {
-   display: flex;
-   transition: transform 2s ease-in-out;
- }
-
- .slide {
-   flex: 0 0 100%;
-   /* Ensures each slide takes full width */
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   overflow: hidden;
-   /* Ensures images don't overflow */
- }
-
- .slide img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
- }
-
- .nav-arrows a {
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   font-size: 2rem;
-   color: black;
-   text-decoration: none;
-   padding: 10px;
-   background: rgba(255, 255, 255, 0.7);
-   border-radius: 50%;
- }
-
- #prev {
-   left: 10px;
- }
-
- #next {
-   right: 10px;
- }
-
- .dots {
-   text-align: center;
-   padding: 10px 0;
- }
-
- .dots span {
-   display: inline-block;
-   width: 15px;
-   height: 15px;
-   margin: 0 5px;
-   background-color: gray;
-   border-radius: 50%;
-   cursor: pointer;
- }
-
- .dots.active {
-   background-color: black;
- }
-
- .hero-button {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background-color: rgb(180, 52, 52);
-   color: white;
-   font-size: 1rem;
-   font-family: 'Charm', cursive;
-   padding: 10px 20px;
-   border: none;
-   border-radius: 20px;
-   cursor: pointer;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-   z-index: 100;
-   transition: background-color 0.3s ease, transform 0.3s ease;
- }
-
- .hero-button:hover {
-   background-color: orange;
-   color: black;
-   transform: translate(-50%, -50%) scale(1.05);
- }
-
- footer {
-   background-color: #1E3A5F;
-   color: white;
-   padding: 20px;
-   text-align: center;
-   display: flex;
-   flex-direction: column;
- }
-
- .footer-top {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   width: 100%;
- }
-
- .our-brands {
-   font-size: larger;
-   font-weight: bold;
-   margin-bottom: 10px;
-   text-align: center;
-   flex: 1;
-   white-space: nowrap;
-   overflow: hidden;
- }
-
- .brand-logos {
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   gap: 10px;
- }
-
- .brand-logos img {
-   width: 50px;
-   height: auto;
-   margin: 0;
-   transition: transform 0.3s ease;
- }
-
- .footer-bottom {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-   margin-top: 20px;
- }
-
- .footer-bottom.copyright {
-   font-size: smaller;
-   text-align: left;
- }
-
- .social-icon {
-   width: 30px;
-   height: 30px;
-   margin: 0 10px;
-   transition: transform 0.3s ease;
- }
-
- .social-icon:hover {
-   transform: scale(1.1);
- }
-
- /* Dark mode toggle switch */
- .dark-mode-toggle {
-   display: flex;
-   align-items: center;
-   gap: 8px;
-   position: absolute;
-   top: 10px;
-   right: 20px;
-   font-size: 14px;
-   color: white;
- }
-
- .switch {
-   position: relative;
-   display: inline-block;
-   width: 40px;
-   height: 20px;
- }
-
- .switch input {
-   opacity: 0;
-   width: 0;
-   height: 0;
- }
-
- .dark-mode-text {
-   margin-top: 1rem;
-   font-size: 12px;
-   font-weight: bold;
-   margin-left: 5px;
- }
-
- .slider {
-   position: absolute;
-   cursor: pointer;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   background-color: #ccc;
-   transition: 0.4s;
-   border-radius: 20px;
- }
-
- .slider:before {
-   position: absolute;
-   content: "";
-   height: 14px;
-   width: 14px;
-   left: 3px;
-   bottom: 3px;
-   background-color: white;
-   transition: 0.4s;
-   border-radius: 50%;
- }
-
- input:checked+.slider {
-   background-color: #FFD700;
- }
-
- input:checked+.slider:before {
-   transform: translateX(20px);
- }
-
- /* DARK MODE STYLES */
- .dark-mode {
-   background-color: #121212;
-   color: #e0e0e0;
- }
-
- /* Apply dark mode to header and footer */
- .dark-mode header {
-   background-color: #181818;
-   color: #FFD700;
- }
-
- .dark-mode nav ul {
-   background-color: #181818;
-   border-top: 2px solid #FFD700;
- }
-
- .dark-mode nav ul li a {
-   color: #FFD700;
- }
-
- .dark-mode footer {
-   background-color: #181818;
-   color: #FFD700;
- }
-
- .dark-mode .hero-button {
-   background-color: rgba(255, 215, 0, 0.8);
-   color: black;
- }
-
- .dark-mode .social-icon {
-   filter: brightness(0.8);
- }
-
- .dark-mode .brand-logos img {
-   filter: brightness(0.8);
- }
-
- .weather-alert p {
-   margin: 0;
-   font-size: 1rem;
- }
-
- #close-alert {
-   background: none;
-   border: none;
-   color: rgb(0, 0, 0);
-   font-size: 1.5rem;
-   cursor: pointer;
-   position: absolute;
-   right: 15px;
-   top: 50%;
-   transform: translateY(-50%);
- }
-
- .weather-alert {
-   background-color: #d8a12b;
-   color: rgb(0, 0, 0);
-   font-weight: bold;
-   font-size: larger;
-   padding: 15px;
-   text-align: center;
-   position: relative;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
-
- .weather-section {
-   padding: 2rem 1rem;
-   text-align: center;
-   background-color: #f5f5f5;
-   margin: 2rem 0;
- }
-
- .weather-section h2 {
-   color: #1E3A5F;
-   margin-bottom: 1.5rem;
-   font-family: 'Charm', cursive;
- }
-
- .weather-container {
-   display: flex;
-   flex-direction: column;
-   gap: 2rem;
-   max-width: 800px;
-   margin: 0 auto;
- }
-
- .current-weather,
- .forecast {
-   background-color: white;
-   border-radius: 10px;
-   padding: 1.5rem;
-   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
- }
-
- .weather-info {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- }
-
- .weather-conditions-item {
-   display: flex;
-   align-items: center;
-   margin: 10px 0;
- }
-
- .weather-icon {
-   width: 50px;
-   height: 50px;
-   margin-right: 15px;
- }
-
- /* Dark mode styles */
- .dark-mode .weather-section {
-   background-color: #252525;
- }
-
- .dark-mode .weather-section h2 {
-   color: #FFD700;
- }
-
- .dark-mode .current-weather,
- .dark-mode .forecast {
-   background-color: #333;
-   color: #e0e0e0;
- }
-
- .dark-mode .weather-alert {
-   background-color: #d8a12b;
-   color: rgb(0, 0, 0);
- }
-
- body {
-   font-family: Arial, sans-serif;
-   line-height: 1.6;
-   margin: 0;
-   padding: 20px;
-   background-color: #f5f5f5;
- }
-
- .container {
-   max-width: 1200px;
-   margin: 0 auto;
- }
-
- .card {
-   background-color: white;
-   border-radius: 8px;
-   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-   padding: 25px;
-   margin-bottom: 30px;
- }
-
- h2 {
-   color: #333;
-   margin-top: 0;
-   border-bottom: 2px solid #eee;
-   padding-bottom: 10px;
- }
-
- ul {
-   padding-left: 20px;
- }
-
- li {
-   margin-bottom: 8px;
- }
-
- table {
-   width: 100%;
-   border-collapse: collapse;
-   margin-top: 20px;
- }
-
- th,
- td {
-   padding: 12px;
-   text-align: left;
-   border-bottom: 1px solid #ddd;
- }
-
- th {
-   background-color: #f8f8f8;
-   font-weight: bold;
- }
-
- tr:hover {
-   background-color: #f5f5f5;
- }
-
- select {
-   padding: 10px;
-   border-radius: 4px;
-   border: 1px solid #ddd;
-   margin-bottom: 20px;
-   width: 100%;
-   max-width: 400px;
- }
-
- label {
-   display: block;
-   margin-top: 15px;
-   margin-bottom: 5px;
-   font-weight: bold;
- }
-
- .guitar-details {
-   margin-top: 20px;
-   padding: 15px;
-   background-color: #f8f8f8;
-   border-radius: 4px;
-   display: none;
- }
-
- .guitar-details h3 {
-   margin-top: 0;
-   color: #333;
- }
-
- .guitar-details ul {
-   margin-bottom: 0;
- }
-
- @media (max-width: 600px) {
-   .logo-container {
-     flex-direction: row;
-     align-items: center;
-   }
-
-   .logo {
-     width: 100px;
-     margin: 0 10px 0 15px;
-   }
-
-   h1 {
-     font-size: 1.25rem;
-   }
-
-   .our-brands {
-     font-size: 1.2rem;
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
-   }
-
-   .dark-mode-text {
-     display: none;
-     margin-top: 1rem;
-     font-size: 12px;
-     font-weight: bold;
-     margin-left: 5px;
-   }
-
-   .weather-container {
-     flex-direction: row;
-     align-items: stretch;
-   }
-
-   .current-weather,
-   .forecast {
-     flex: 1;
-   }
- }
-
- /* Base styles for locations page */
- .locations-container {
-   padding: 1rem;
-   max-width: 1200px;
-   margin: 0 auto;
- }
-
- .locations-container h2 {
-   text-align: center;
-   font-family: 'Charm', cursive;
-   color: #1E3A5F;
-   margin-bottom: 2rem;
- }
-
- /* Location cards - single column layout for mobile */
- .location-cards {
-   display: flex;
-   flex-direction: column;
-   gap: 2rem;
-   margin-bottom: 2rem;
- }
-
- .location-card {
-   background-color: white;
-   border-radius: 10px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   padding: 1.5rem;
-   text-align: center;
- }
-
- .location-card h3 {
-   font-family: 'Charm', cursive;
-   color: #1E3A5F;
-   margin-top: 0;
-   margin-bottom: 1rem;
- }
-
- .location-image {
-   width: 100%;
-   height: auto;
-   border-radius: 8px;
-   margin-bottom: 1rem;
-   object-fit: cover;
- }
-
- /* Promotional message */
- .promotional-message {
-   background-color: #1E3A5F;
-   color: white;
-   padding: 2rem;
-   border-radius: 10px;
-   text-align: center;
-   margin: 2rem 0;
-   font-size: 1.1rem;
-   line-height: 1.6;
- }
-
- /* Map and weather sections */
- .info-sections {
-   display: flex;
-   flex-direction: column;
-   gap: 2rem;
-   margin-bottom: 2rem;
- }
-
- .map-section,
- .weather-section {
-   background-color: white;
-   border-radius: 10px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   padding: 1.5rem;
- }
-
- .map-section h3,
- .weather-section h3 {
-   font-family: 'Charm', cursive;
-   color: #1E3A5F;
-   margin-top: 0;
-   margin-bottom: 1rem;
-   text-align: center;
- }
-
- .map-container {
-   width: 100%;
-   height: 300px;
-   border-radius: 8px;
-   overflow: hidden;
- }
-
- .map-container iframe {
-   width: 100%;
-   height: 100%;
-   border: none;
- }
-
- /* Weather container styles */
- .weather-container {
-   display: flex;
-   flex-direction: column;
-   gap: 1.5rem;
- }
-
- .current-weather,
- .forecast {
-   background-color: #f5f5f5;
-   border-radius: 8px;
-   padding: 1rem;
- }
-
- .weather-info {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- }
-
- .weather-info h4,
- .forecast h4 {
-   margin-top: 0;
-   margin-bottom: 0.5rem;
-   color: #1E3A5F;
- }
-
- /* Dark mode styles */
- .dark-mode .locations-container h2,
- .dark-mode .location-card h3,
- .dark-mode .map-section h3,
- .dark-mode .weather-section h3,
- .dark-mode .weather-info h4,
- .dark-mode .forecast h4 {
-   color: #FFD700;
- }
-
- .dark-mode .location-card,
- .dark-mode .map-section,
- .dark-mode .weather-section {
-   background-color: #333;
-   color: #e0e0e0;
- }
-
- .dark-mode .promotional-message {
-   background-color: #181818;
-   color: #FFD700;
- }
-
- .dark-mode .current-weather,
- .dark-mode .forecast {
-   background-color: #252525;
- }
-
- body {
-   font-family: Arial, sans-serif;
-   line-height: 1.6;
-   margin: 0;
-   padding: 20px;
-   background-color: #f5f5f5;
- }
-
- .container {
-   max-width: 1200px;
-   margin: 0 auto;
- }
-
- .agreement-card {
-   background-color: white;
-   border-radius: 8px;
-   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-   padding: 25px;
-   margin-bottom: 30px;
-   margin-top: 30px;
- }
-
- .agreement-card ul {
-   list-style-type: none;
-   text-align: left;
- }
-
- h2 {
-   color: #333;
-   margin-top: 0;
-   border-bottom: 2px solid #eee;
-   padding-bottom: 10px;
- }
-
- ul {
-   padding-left: 20px;
- }
-
- li {
-   margin-bottom: 8px;
- }
-
- table {
-   width: 100%;
-   border-collapse: collapse;
-   margin-top: 20px;
- }
-
- th,
- td {
-   padding: 12px;
-   text-align: left;
-   border-bottom: 1px solid #ddd;
- }
-
- th {
-   background-color: #f8f8f8;
-   font-weight: bold;
- }
-
- tr:hover {
-   background-color: #f5f5f5;
- }
-
- select {
-   padding: 10px;
-   border-radius: 4px;
-   border: 1px solid #ddd;
-   margin-bottom: 20px;
-   width: 100%;
-   max-width: 400px;
- }
-
- label {
-   display: block;
-   margin-top: 15px;
-   margin-bottom: 5px;
-   font-weight: bold;
- }
-
- .guitar-details {
-   margin-top: 20px;
-   padding: 15px;
-   background-color: #f8f8f8;
-   border-radius: 4px;
-   display: none;
- }
-
- .guitar-details h3 {
-   margin-top: 0;
-   color: #333;
- }
-
- .guitar-details ul {
-   margin-bottom: 0;
- }
-
- /* Variables for consistent theming */
- :root {
-   --dark-bg: #121212;
-   --dark-surface: #1e1e1e;
-   --dark-surface-light: #2d2d2d;
-   --dark-text: #e0e0e0;
-   --dark-text-secondary: #a0a0a0;
-   --dark-border: #333333;
-   --dark-primary: #bb86fc;
-   --dark-primary-variant: #3700b3;
-   --dark-secondary: #03dac6;
-   --dark-error: #cf6679;
-   --dark-zebra-odd: #1a1a1a;
-   --dark-zebra-even: #252525;
-   --dark-hover: rgba(187, 134, 252, 0.15);
- }
-
- /* General dark mode styles */
- body.dark-mode {
-   background-color: var(--dark-bg);
-   color: var(--dark-text);
- }
-
- /* Header styles */
- body.dark-mode header {
-   background-color: var(--dark-surface);
-   border-bottom: 1px solid var(--dark-border);
- }
-
- body.dark-mode #bus-name {
-   color: var(--dark-primary);
- }
-
- body.dark-mode nav {
-   background-color: var(--dark-surface);
- }
-
- body.dark-mode #menu-btn {
-   background-color: var(--dark-surface-light);
-   color: var(--dark-text);
-   border: 1px solid var(--dark-border);
- }
-
- body.dark-mode #nav-list {
-   background-color: var(--dark-surface);
- }
-
- body.dark-mode #nav-list li a {
-   color: var(--dark-text);
- }
-
- body.dark-mode #nav-list li a:hover {
-   background-color: var(--dark-surface-light);
-   color: var(--dark-primary);
- }
-
- body.dark-mode #nav-list li a.active {
-   background-color: var(--dark-primary-variant);
-   color: var(--dark-text);
- }
-
- /* Card styles */
- body.dark-mode .card,
- body.dark-mode .agreement-card {
-   background-color: var(--dark-surface);
-   border: 1px solid var(--dark-border);
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
- }
-
- body.dark-mode .card h2,
- body.dark-mode .agreement-card h2 {
-   color: var(--dark-primary);
-   border-bottom: 1px solid var(--dark-border);
- }
-
- body.dark-mode .agreement-card ul li {
-   color: var(--dark-text);
- }
-
- /* Form elements */
- body.dark-mode select,
- body.dark-mode label {
-   color: var(--dark-text);
- }
-
- body.dark-mode select {
-   background-color: var(--dark-surface-light);
-   border: 1px solid var(--dark-border);
- }
-
- body.dark-mode select:focus {
-   border-color: var(--dark-primary);
-   outline: none;
- }
-
- /* Table styles - Enhanced for dark mode */
- body.dark-mode table {
-   border-collapse: collapse;
-   width: 100%;
-   background-color: var(--dark-surface);
-   color: var(--dark-text);
-   border: 1px solid var(--dark-border);
- }
-
- body.dark-mode th {
-   background-color: var(--dark-surface-light);
-   color: var(--dark-primary);
-   border: 1px solid var(--dark-border);
-   padding: 10px;
-   text-align: left;
- }
-
- body.dark-mode td {
-   border: 1px solid var(--dark-border);
-   padding: 8px;
-   color: var(--dark-text);
- }
-
- /* Zebra striping for table rows */
- body.dark-mode tr:nth-child(odd) {
-   background-color: var(--dark-zebra-odd);
- }
-
- body.dark-mode tr:nth-child(even) {
-   background-color: var(--dark-zebra-even);
- }
-
- body.dark-mode tr:hover {
-   background-color: var(--dark-hover);
- }
-
- /* Table inside the card */
- body.dark-mode .card table {
-   margin-top: 15px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
- }
-
- /* Guitar details section */
- body.dark-mode #guitar-details {
-   background-color: var(--dark-surface-light);
-   border: 1px solid var(--dark-border);
- }
-
- body.dark-mode #guitar-details h3 {
-   color: var(--dark-primary);
- }
-
- body.dark-mode #guitar-details strong {
-   color: var(--dark-secondary);
- }
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-bg: #121212;
+  --dark-surface: #1e1e1e;
+  --dark-surface-light: #2d2d2d;
+  --dark-text: #e0e0e0;
+  --dark-text-secondary: #a0a0a0;
+  --dark-border: #333333;
+  --dark-primary: #bb86fc;
+  --dark-primary-variant: #3700b3;
+  --dark-secondary: #03dac6;
+  --dark-error: #cf6679;
+  --dark-zebra-odd: #1a1a1a;
+  --dark-zebra-even: #252525;
+  --dark-hover: rgba(187, 134, 252, 0.15);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  z-index: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+  background-color: #1E3A5F;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+
+h1 {
+  font-size: 1rem;
+  font-family: charm;
+  margin-left: 10px;
+  line-height: 1.2;
+}
+
+h2 {
+  color: #333;
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 20px;
+  border-top: 2px solid white;
+  display: none;
+  flex-direction: column;
+  background-color: #1E3A5F;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li {
+  margin: 0;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav ul li:last-child {
+  border-bottom: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul.open {
+  display: flex;
+  z-index: 1000;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  color: #FFD700;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#menu-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-btn.active {
+  content: '✖';
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 2s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-arrows a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.dots span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots.active {
+  background-color: black;
+}
+
+.hero-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(180, 52, 52);
+  color: white;
+  font-size: 1rem;
+  font-family: 'Charm', cursive;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: orange;
+  color: black;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+footer {
+  background-color: #1E3A5F;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.our-brands {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand-logos img {
+  width: 50px;
+  height: auto;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-bottom.copyright {
+  font-size: smaller;
+  text-align: left;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.dark-mode-text {
+  margin-top: 1rem;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #FFD700;
+}
+
+input:checked+.slider:before {
+  transform: translateX(20px);
+}
+
+.weather-alert p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#close-alert {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.weather-alert {
+  background-color: #d8a12b;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: larger;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-section {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin: 2rem 0;
+}
+
+.weather-section h2 {
+  color: #1E3A5F;
+  margin-bottom: 1.5rem;
+  font-family: 'Charm', cursive;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.current-weather,
+.forecast {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-conditions-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+select {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.guitar-details {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  display: none;
+}
+
+.guitar-details h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.guitar-details ul {
+  margin-bottom: 0;
+}
+
+.locations-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.locations-container h2 {
+  text-align: center;
+  font-family: 'Charm', cursive;
+  color: #1E3A5F;
+  margin-bottom: 2rem;
+}
+
+.location-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.location-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.location-card h3 {
+  font-family: 'Charm', cursive;
+  color: #1E3A5F;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.location-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.promotional-message {
+  background-color: #1E3A5F;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.info-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.map-section,
+.weather-section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.map-section h3,
+.weather-section h3 {
+  font-family: 'Charm', cursive;
+  color: #1E3A5F;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.map-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.weather-info h4,
+.forecast h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #1E3A5F;
+}
+
+.agreement-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.agreement-card ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background-color: #181818;
+  color: #FFD700;
+}
+
+.dark-mode nav ul {
+  background-color: #181818;
+  border-top: 2px solid #FFD700;
+}
+
+.dark-mode nav ul li a {
+  color: #FFD700;
+}
+
+.dark-mode footer {
+  background-color: #181818;
+  color: #FFD700;
+}
+
+.dark-mode .hero-button {
+  background-color: rgba(255, 215, 0, 0.8);
+  color: black;
+}
+
+.dark-mode .social-icon {
+  filter: brightness(0.8);
+}
+
+.dark-mode .brand-logos img {
+  filter: brightness(0.8);
+}
+
+.dark-mode .weather-section {
+  background-color: #252525;
+}
+
+.dark-mode .weather-section h2 {
+  color: #FFD700;
+}
+
+.dark-mode .current-weather,
+.dark-mode .forecast {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .locations-container h2,
+.dark-mode .location-card h3,
+.dark-mode .map-section h3,
+.dark-mode .weather-section h3,
+.dark-mode .weather-info h4,
+.dark-mode .forecast h4 {
+  color: #FFD700;
+}
+
+.dark-mode .location-card,
+.dark-mode .map-section,
+.dark-mode .weather-section {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .promotional-message {
+  background-color: #181818;
+  color: #FFD700;
+}
+
+.dark-mode #bus-name {
+  color: var(--dark-primary);
+}
+
+.dark-mode nav {
+  background-color: var(--dark-surface);
+}
+
+.dark-mode #menu-btn {
+  background-color: var(--dark-surface-light);
+  color: var(--dark-text);
+  border: 1px solid var(--dark-border);
+}
+
+.dark-mode #nav-list {
+  background-color: var(--dark-surface);
+}
+
+.dark-mode #nav-list li a {
+  color: var(--dark-text);
+}
+
+.dark-mode #nav-list li a:hover {
+  background-color: var(--dark-surface-light);
+  color: var(--dark-primary);
+}
+
+.dark-mode #nav-list li a.active {
+  background-color: var(--dark-primary-variant);
+  color: var(--dark-text);
+}
+
+.dark-mode .card,
+.dark-mode .agreement-card {
+  background-color: var(--dark-surface);
+  border: 1px solid var(--dark-border);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .card h2,
+.dark-mode .agreement-card h2 {
+  color: var(--dark-primary);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.dark-mode .agreement-card ul li {
+  color: var(--dark-text);
+}
+
+.dark-mode select,
+.dark-mode label {
+  color: var(--dark-text);
+}
+
+.dark-mode select {
+  background-color: var(--dark-surface-light);
+  border: 1px solid var(--dark-border);
+}
+
+.dark-mode select:focus {
+  border-color: var(--dark-primary);
+  outline: none;
+}
+
+.dark-mode table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--dark-surface);
+  color: var(--dark-text);
+  border: 1px solid var(--dark-border);
+}
+
+.dark-mode th {
+  background-color: var(--dark-surface-light);
+  color: var(--dark-primary);
+  border: 1px solid var(--dark-border);
+  padding: 10px;
+  text-align: left;
+}
+
+.dark-mode td {
+  border: 1px solid var(--dark-border);
+  padding: 8px;
+  color: var(--dark-text);
+}
+
+.dark-mode tr:nth-child(odd) {
+  background-color: var(--dark-zebra-odd);
+}
+
+.dark-mode tr:nth-child(even) {
+  background-color: var(--dark-zebra-even);
+}
+
+.dark-mode tr:hover {
+  background-color: var(--dark-hover);
+}
+
+.dark-mode .card table {
+  margin-top: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode #guitar-details {
+  background-color: var(--dark-surface-light);
+  border: 1px solid var(--dark-border);
+}
+
+.dark-mode #guitar-details h3 {
+  color: var(--dark-primary);
+}
+
+.dark-mode #guitar-details strong {
+  color: var(--dark-secondary);
+}
+
+@media (max-width: 600px) {
+  .logo-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100px;
+    margin: 0 10px 0 15px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .our-brands {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .dark-mode-text {
+    display: none;
+    margin-top: 1rem;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .weather-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .current-weather,
+  .forecast {
+    flex: 1;
+  }
+}
