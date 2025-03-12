@@ -143,6 +143,11 @@ nav ul li a.active {
   content: '✖';
 }
 
+.hero-button a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
 .carousel-container {
   position: relative;
   max-width: 100%;
