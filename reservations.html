@@ -39,86 +39,81 @@
       </ul>
     </nav>
   </header>
-
-  <div class="container">
-    <div class="agreement-card">
-      <h2>Guitar Rental Services and Agreements</h2>
-      <ul>
-        <li>A $50 security deposit is required to confirm reservations.</li>
-        <li>A valid government-issued ID is required at the time of rental.</li>
-        <li>Renters must be at least 18 years old to rent a guitar.</li>
-        <li>Unlimited playtime during the rental period.</li>
-        <li>Basic liability coverage is included with each rental.</li>
-        <li>Damage protection plans are available for purchase.</li>
-        <li>Free delivery to hotels or Airbnbs for rentals of 2+ days.</li>
-        <li>Payment methods accepted: cash, credit card, debit card.</li>
-        <li>Guitars may be returned to either of our rental locations.</li>
-        <li>Guitars must be returned in the same condition as received.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Guitar Rental Pricing</h2>
-
-      <label for="guitar-type">Select Guitar Type:</label>
-      <select id="guitar-type" onchange="filterGuitars()">
-        <option value="all">All Guitars</option>
-        <option value="acoustic">Acoustic Guitars</option>
-        <option value="classical">Classical Guitars</option>
-      </select>
-
-      <label for="guitar-model">Select Guitar Model:</label>
-      <select id="guitar-model" onchange="showGuitarDetails()">
-        <option value="">-- Select a model --</option>
-      </select>
-
-      <div id="guitar-details" class="guitar-details"></div>
-
-      <table id="guitar-table">
-        <thead>
-          <tr>
-            <th>Brand</th>
-            <th>Model</th>
-            <th>Type</th>
-            <th>Purchase Price</th>
-            <th>Daily Rental</th>
-            <th>Weekly Rental</th>
-            <th>Monthly Rental</th>
-          </tr>
-        </thead>
-        <tbody id="guitar-table-body">
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-top">
-      <div class="our-brands">Our Brands</div>
-      <div class="brand-logos">
-        <img src="./images/cordoba_logo.svg" alt="Cordoba Logo">
-        <img src="./images/gibson_logo.svg" alt="Gibson Logo">
-        <img src="./images/martin_logo.svg" alt="Martin Logo">
-        <img src="./images/ramirez_logo.svg" alt="Ramirez Logo">
-        <img src="./images/takamine-logo.png" alt="Takamine Logo">
-        <img src="./images/taylor_logo.svg" alt="Taylor Logo">
+  <main class="reservation-main-bg">
+    <div class="container reservation-container-bg">
+      <div class="agreement-card reservation-agreement-bg">
+        <h2>Guitar Rental Services and Agreements</h2>
+        <ul>
+          <li>A $50 security deposit is required to confirm reservations.</li>
+          <li>A valid government-issued ID is required at the time of rental.</li>
+          <li>Renters must be at least 18 years old to rent a guitar.</li>
+          <li>Unlimited playtime during the rental period.</li>
+          <li>Basic liability coverage is included with each rental.</li>
+          <li>Damage protection plans are available for purchase.</li>
+          <li>Free delivery to hotels or Airbnbs for rentals of 2+ days.</li>
+          <li>Payment methods accepted: cash, credit card, debit card.</li>
+          <li>Guitars may be returned to either of our rental locations.</li>
+          <li>Guitars must be returned in the same condition as received.</li>
+        </ul>
+      </div>
+      <div class="card reservation-pricing-bg">
+        <h2>Guitar Rental Pricing</h2>
+        <label for="guitar-type">Select Guitar Type:</label>
+        <select id="guitar-type" onchange="filterGuitars()">
+          <option value="all">All Guitars</option>
+          <option value="acoustic">Acoustic Guitars</option>
+          <option value="classical">Classical Guitars</option>
+        </select>
+        <label for="guitar-model">Select Guitar Model:</label>
+        <select id="guitar-model" onchange="showGuitarDetails()">
+          <option value="">-- Select a model --</option>
+        </select>
+        <div id="guitar-details" class="guitar-details reservation-details-bg"></div>
+        <table id="guitar-table">
+          <thead>
+            <tr>
+              <th>Brand</th>
+              <th>Model</th>
+              <th>Type</th>
+              <th>Purchase Price</th>
+              <th>Daily Rental</th>
+              <th>Weekly Rental</th>
+              <th>Monthly Rental</th>
+            </tr>
+          </thead>
+          <tbody id="guitar-table-body">
+          </tbody>
+        </table>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="copyright">&copy; Acoustic Accolades Inc. All Rights Reserved</div>
-      <div class="footer-right">
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="./images/facebook-icon.png" alt="Facebook" class="social-icon">
-        </a>
-        <a href="https://www.linkedin.com" target="_blank">
-          <img src="./images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
-        </a>
+    <footer>
+      <div class="footer-top">
+        <div class="our-brands">Our Brands</div>
+        <div class="brand-logos">
+          <img src="./images/cordoba_logo.svg" alt="Cordoba Logo">
+          <img src="./images/gibson_logo.svg" alt="Gibson Logo">
+          <img src="./images/martin_logo.svg" alt="Martin Logo">
+          <img src="./images/ramirez_logo.svg" alt="Ramirez Logo">
+          <img src="./images/takamine-logo.png" alt="Takamine Logo">
+          <img src="./images/taylor_logo.svg" alt="Taylor Logo">
+        </div>
       </div>
-    </div>
-  </footer>
-  <script defer src="./scripts/script.js"></script>
-  <script defer src="./scripts/darkmode.js"></script>
-  <script defer src="./scripts/weather.js"></script>
-  <script defer src="./scripts/reservations.js"></script>
+      <div class="footer-bottom">
+        <div class="copyright">&copy; Acoustic Accolades Inc. All Rights Reserved</div>
+        <div class="footer-right">
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="./images/facebook-icon.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <img src="./images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script defer src="./scripts/script.js"></script>
+    <script defer src="./scripts/darkmode.js"></script>
+    <script defer src="./scripts/weather.js"></script>
+    <script defer src="./scripts/reservations.js"></script>
 </body>
 
 </html>

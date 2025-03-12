@@ -857,3 +857,27 @@ label {
     flex: 1;
   }
 }
+
+.reservation-body-bg {
+  background-color: #F5F5F5;
+}
+
+.reservation-main-bg {
+  background-color: #F5F5F5;
+}
+
+.reservation-container-bg {
+  background-color: #F5F5F5;
+}
+
+.reservation-agreement-bg {
+  background-color: #DDD4D4;
+}
+
+.reservation-pricing-bg {
+  background-color: #B0C4DE;
+}
+
+.reservation-details-bg {
+  background-color: lightsteelblue;
+}
