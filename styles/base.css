@@ -878,7 +878,7 @@ label {
 }
 
 .agreement-card ul {
-  list-style-type: circle;
+  list-style-type: disc;
   /* or square, disc, etc. */
 }
 
