@@ -676,7 +676,7 @@ label {
 
 .dark-mode .current-weather,
 .dark-mode .forecast {
-  background-color: #333;
+  background-color: #222;
   color: #e0e0e0;
 }
 
@@ -692,12 +692,12 @@ label {
 .dark-mode .location-card,
 .dark-mode .map-section,
 .dark-mode .weather-section {
-  background-color: #333;
+  background-color: #222 !important;
   color: #e0e0e0;
 }
 
 .dark-mode .promotional-message {
-  background-color: #181818;
+  background-color: #222;
   color: #FFD700;
 }
 
@@ -896,8 +896,8 @@ label {
   background-color: #222222;
 }
 
-.dark-mode .res-nav-bg {
-  background-color: #444444;
+.dark-mode .res-nav-bg important {
+  background-color: #222222;
 }
 
 .dark-mode .reservation-agreement-bg {
