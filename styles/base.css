@@ -872,12 +872,38 @@ label {
 
 .reservation-agreement-bg {
   background-color: #DDD4D4;
+  border: 5px solid #8B4513;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px #8B4513;
 }
 
 .reservation-pricing-bg {
   background-color: #B0C4DE;
+  border: 5px solid #8B4513;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px #8B4513;
 }
 
 .reservation-details-bg {
   background-color: lightsteelblue;
+}
+
+.dark-mode .reservation-main-bg {
+  background-color: #333333;
+}
+
+.dark-mode .res-header-bg {
+  background-color: #222222;
+}
+
+.dark-mode .res-nav-bg {
+  background-color: #444444;
+}
+
+.dark-mode .reservation-agreement-bg {
+  background-color: #222222;
+}
+
+.dark-mode .container.reservation-container-bg {
+  background-color: #333333;
 }
