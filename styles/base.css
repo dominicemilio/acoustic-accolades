@@ -702,7 +702,7 @@ label {
 }
 
 .dark-mode #bus-name {
-  color: var(--dark-primary);
+  color: #FFD700;
 }
 
 .dark-mode nav {
@@ -875,6 +875,11 @@ label {
   border: 5px solid #8B4513;
   border-radius: 10px;
   box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px #8B4513;
+}
+
+.agreement-card ul {
+  list-style-type: circle;
+  /* or square, disc, etc. */
 }
 
 .reservation-pricing-bg {
