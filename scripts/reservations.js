@@ -228,3 +228,75 @@ document.addEventListener('DOMContentLoaded', function () {
   populateTable(guitarData.guitars);
   populateModelDropdown(guitarData.guitars);
 });
+
+// Add these functions to your existing reservations.js file
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Existing code...
+
+  // Populate the selected guitar dropdown
+  populateGuitarDropdown();
+
+  // Set minimum date to today
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const todayString = `${yyyy}-${mm}-${dd}`;
+  document.getElementById('rental-date').min = todayString;
+
+  // Show/hide dropoff location based on checkbox
+  const dropoffCheckbox = document.getElementById('dropoff');
+  const dropoffLocationContainer = document.getElementById('dropoff-location-container');
+
+  dropoffCheckbox.addEventListener('change', function () {
+    dropoffLocationContainer.style.display = this.checked ? 'block' : 'none';
+    if (!this.checked) {
+      document.getElementById('dropoff-location').value = '';
+    }
+  });
+
+  // Sync selected guitar between table/details and form
+  const guitarModelSelect = document.getElementById('guitar-model');
+  const selectedGuitarSelect = document.getElementById('selected-guitar');
+
+  guitarModelSelect.addEventListener('change', function () {
+    const selectedValue = this.value;
+    if (selectedValue) {
+      for (let i = 0; i < selectedGuitarSelect.options.length; i++) {
+        if (selectedGuitarSelect.options[i].value === selectedValue) {
+          selectedGuitarSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+  });
+
+  // Handle form submission
+  const rentalForm = document.getElementById('rental-form');
+
+  rentalForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Form validation would go here
+
+    // If successful, show confirmation
+    alert('Thank you for your reservation! We will contact you shortly to confirm your booking.');
+
+    // Reset form
+    rentalForm.reset();
+    dropoffLocationContainer.style.display = 'none';
+  });
+});
+
+function populateGuitarDropdown() {
+  const selectedGuitarSelect = document.getElementById('selected-guitar');
+  selectedGuitarSelect.innerHTML = '<option value="">-- Select a guitar --</option>';
+
+  guitarData.guitars.forEach(guitar => {
+    const option = document.createElement('option');
+    option.value = `${guitar.brand}-${guitar.model}`;
+    option.textContent = `${guitar.brand} ${guitar.model} (${guitar.type}) - $${guitar.rental.full_day}/day`;
+    selectedGuitarSelect.appendChild(option);
+  });
+}

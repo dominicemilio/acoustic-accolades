@@ -26,7 +26,7 @@
   <header class="res-header-bg">
     <div class="logo-container">
       <img class="logo" src="./images/logo.png" alt="Guitar Logo">
-      <h1 id="bus-name">Acoustic Guitars</h1>
+      <div id="bus-name">Acoustic Accolades</div>
     </div>
 
     <nav class="res-nav-bg">
@@ -40,6 +40,7 @@
       </ul>
     </nav>
   </header>
+  <h1 class="h1-guitars" id="h1-guitars">Reserve Your Guitar Today</h1>
   <main class="reservation-main-bg">
     <div class="container reservation-container-bg">
       <div class="agreement-card reservation-agreement-bg">
@@ -96,6 +97,87 @@
           </tbody>
         </table>
       </div>
+    </div>
+    <div class="card reservation-form-bg">
+      <h2>Reserve Your Guitar</h2>
+      <form id="rental-form" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-section">
+            <h3>Customer Information</h3>
+            <div class="form-group">
+              <label for="fullname">Full Name: <span class="required">*</span></label>
+              <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email: <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number: <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="location">Home State/Country: <span class="required">*</span></label>
+              <input type="text" id="location" name="location" required>
+            </div>
+          </div>
+          <div class="form-section">
+            <h3>Rental Details</h3>
+            <div class="form-group">
+              <label for="selected-guitar">Selected Guitar: <span class="required">*</span></label>
+              <select id="selected-guitar" name="selected-guitar" required>
+                <option value="">-- Select a guitar --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rental-date">Pickup Date: <span class="required">*</span></label>
+              <input type="date" id="rental-date" name="rental-date" required>
+            </div>
+            <div class="form-group">
+              <label for="rental-period">Rental Period: <span class="required">*</span></label>
+              <select id="rental-period" name="rental-period" required>
+                <option value="">-- Select period --</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </div>
+            <div class="form-group" id="rental-quantity-container">
+              <label for="rental-quantity">Number of Days/Weeks/Months: <span class="required">*</span></label>
+              <input type="number" id="rental-quantity" name="rental-quantity" min="1" required>
+            </div>
+          </div>
+          <div class="form-section full-width">
+            <h3>Special Accommodations</h3>
+            <div class="form-group">
+              <label for="dropoff">Need Guitar Delivery?</label>
+              <div class="checkbox-group">
+                <input type="checkbox" id="dropoff" name="dropoff">
+                <label for="dropoff">Yes, please deliver to my location</label>
+              </div>
+            </div>
+            <div class="form-group" id="dropoff-location-container" style="display: none;">
+              <label for="dropoff-location">Delivery Address:</label>
+              <input type="text" id="dropoff-location" name="dropoff-location"
+                placeholder="Hotel/Airbnb name and address">
+            </div>
+            <div class="form-group">
+              <label for="comments">Additional Comments:</label>
+              <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+          </div>
+          <div class="form-section full-width">
+            <div class="form-submit">
+              <p class="required-note"><span class="required">*</span> Required field</p>
+              <div class="terms-checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the rental terms and conditions <span class="required">*</span></label>
+              </div>
+              <button type="submit" class="submit-btn">Reserve Now</button>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
     <footer>
       <div class="footer-top">
