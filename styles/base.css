@@ -398,7 +398,7 @@ input:checked+.slider:before {
 }
 
 .weather-alert {
-  background-color: #d5d82b;
+  background-color: #8dc722;
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: larger;
