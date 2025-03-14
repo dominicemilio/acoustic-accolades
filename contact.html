@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dominic Emilio Clemence | Final Project - Acoustic Accolades | WDD230 Web Frontend Development</title>
+  <title>Acoustic Accolades Guitar - Contact Us</title>
   <meta name="author" content="Dominic Emilio Clemence">
   <meta name="description"
     content="This is not a real website, it is an assignment by Dominic Emilio Clemence for the WDD 230 - Web Frontend Development course at BYU-Idaho.">
@@ -12,10 +12,9 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://dominicemilio.github.io/acoustic-accolades/images/acoustic-accolades.png">
   <meta property="og:url" content="https://dominicemilio.github.io/acoustic-accolades/">
-  <title>Acoustic Accolades</title>
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/classical.css">
+  <link rel="stylesheet" href="./styles/acoustic.css">
   <link rel="stylesheet" href="./styles/base.css">
   <link rel="stylesheet" href="./styles/medium.css" media="(min-width: 600px)">
   <link rel="stylesheet" href="./styles/larger.css" media="(min-width: 1024px)">
@@ -24,13 +23,13 @@
 </head>
 
 <body>
-  <header>
+  <header class="res-header-bg">
     <div class="logo-container">
       <img class="logo" src="./images/logo.png" alt="Guitar Logo">
       <div id="bus-name">Acoustic Accolades</div>
     </div>
 
-    <nav>
+    <nav class="res-nav-bg">
       <button id="menu-btn">&#9776;</button>
       <ul id="nav-list">
         <li><a href="./index.html">Home</a></li>
@@ -41,18 +40,82 @@
       </ul>
     </nav>
   </header>
-  <main>
 
-    <section class="map-section">
-      <h2 class="weather-h2">Find Us</h2>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d54949.684387221205!2d-87.03170420535353!3d20.331072709777477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x8f4facc97b44f901%3A0x2716ce912f7da3f0!2sPunta%20Sur%20Eco%20Beach%20Park%2C%20Coastal%20Highway%20South%2C%20zona%20Hotelera%20sur%2C%20San%20Miguel%20de%20Cozumel%2C%20Quintana%20Roo%2C%20Mexico!3m2!1d20.292531699999998!2d-86.958828!4m5!1s0x8f4e53002be5d803%3A0x3a1c1a2a6f8e6c4c!2sPlaya%20Palancar%2C%2077687%20Quintana%20Roo%2C%20Mexico!3m2!1d20.352327799999998!2d-87.0225483!5e1!3m2!1sen!2sco!4v1741810298080!5m2!1sen!2sco"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+  <h1 class="h1-guitars" id="h1-guitars">Contact Us</h1>
+
+  <main class="contact-main-bg">
+    <div class="container contact-container-bg">
+      <div class="card location-cards">
+        <h2>Our Locations</h2>
+        <div class="locations-grid">
+          <div class="location-card">
+            <h3>Playa Palancar</h3>
+            <div class="location-details">
+              <p><span class="detail-label">Hours:</span> 9am-6pm Daily</p>
+              <p><span class="detail-label">Email:</span> <a
+                  href="mailto:palancar@acousticaccolades.com">palancar@acousticaccolades.com</a></p>
+              <p><span class="detail-label">Phone:</span> (987) 123-4567</p>
+            </div>
+            <div class="location-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3737.544792339778!2d-86.99031212416697!3d20.475152107904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e5748baa51463%3A0x2591457e5a324140!2sPlaya%20Palancar!5e0!3m2!1sen!2sus!4v1710517162114!5m2!1sen!2sus"
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="location-card">
+            <h3>Punta Sur Ecological Park</h3>
+            <div class="location-details">
+              <p><span class="detail-label">Hours:</span> 10am-5pm Daily</p>
+              <p><span class="detail-label">Email:</span> <a
+                  href="mailto:puntasur@acousticaccolades.com">puntasur@acousticaccolades.com</a></p>
+              <p><span class="detail-label">Phone:</span> (987) 765-4321</p>
+            </div>
+            <div class="location-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.8800186711583!2d-86.97740562417158!3d20.292912414344624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e556fd8697abf%3A0xacc7fb6d2b00cc04!2sPunta%20Sur%20Ecological%20Park!5e0!3m2!1sen!2sus!4v1710517218893!5m2!1sen!2sus"
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+
+      <div class="card contact-form-card">
+        <h2>Send Us a Message</h2>
+        <form id="contact-form" action="thankyou.html" method="get">
+          <div class="form-group">
+            <label for="name">Full Name: <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Preferred Location:</label>
+            <select id="location" name="location">
+              <option value="">-- Select a location --</option>
+              <option value="Playa Palancar">Playa Palancar</option>
+              <option value="Punta Sur">Punta Sur Ecological Park</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message: <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <p class="required-note"><span class="required">*</span> Required field</p>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -79,5 +142,10 @@
       </div>
     </div>
   </footer>
-  <script src="./scripts/darkmode.js"></script>
+
+  <script defer src="./scripts/darkmode.js"></script>
+  <script defer src="./scripts/menu.js"></script>
+  <script defer src="./scripts/contact.js"></script>
 </body>
+
+</html>

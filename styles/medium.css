@@ -89,4 +89,8 @@
   .weather-section {
     flex: 1;
   }
+
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
