@@ -584,7 +584,7 @@ label {
 
 .map-section,
 .weather-section {
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(235, 235, 235);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
