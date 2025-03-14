@@ -386,7 +386,7 @@ input:checked+.slider:before {
 }
 
 .weather-alert {
-  background-color: #d8a12b;
+  background-color: #d5d82b;
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: larger;
@@ -409,6 +409,11 @@ input:checked+.slider:before {
   color: #1E3A5F;
   margin-bottom: 1.5rem;
   font-family: 'Charm', cursive;
+}
+
+.weather-h2 {
+  font-family: 'charm', cursive;
+  font-weight: 700;
 }
 
 .weather-container {
@@ -579,7 +584,7 @@ label {
 
 .map-section,
 .weather-section {
-  background-color: white;
+  background-color: rgb(216, 216, 216);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
