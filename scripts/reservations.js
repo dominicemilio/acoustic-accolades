@@ -229,15 +229,10 @@ document.addEventListener('DOMContentLoaded', function () {
   populateModelDropdown(guitarData.guitars);
 });
 
-// Add these functions to your existing reservations.js file
-
 document.addEventListener('DOMContentLoaded', function () {
-  // Existing code...
 
-  // Populate the selected guitar dropdown
   populateGuitarDropdown();
 
-  // Set minimum date to today
   const today = new Date();
   const yyyy = today.getFullYear();
   const mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -245,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const todayString = `${yyyy}-${mm}-${dd}`;
   document.getElementById('rental-date').min = todayString;
 
-  // Show/hide dropoff location based on checkbox
   const dropoffCheckbox = document.getElementById('dropoff');
   const dropoffLocationContainer = document.getElementById('dropoff-location-container');
 
@@ -256,7 +250,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Sync selected guitar between table/details and form
   const guitarModelSelect = document.getElementById('guitar-model');
   const selectedGuitarSelect = document.getElementById('selected-guitar');
 
@@ -272,18 +265,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Handle form submission
   const rentalForm = document.getElementById('rental-form');
 
   rentalForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // Form validation would go here
-
-    // If successful, show confirmation
     alert('Thank you for your reservation! We will contact you shortly to confirm your booking.');
 
-    // Reset form
     rentalForm.reset();
     dropoffLocationContainer.style.display = 'none';
   });

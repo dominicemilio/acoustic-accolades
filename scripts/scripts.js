@@ -1,4 +1,3 @@
-// Combine the data from both guitar files into a single array
 const guitarData = {
   guitars: [
     ...acousticGuitars["acoustic-guitars"],
@@ -6,7 +5,6 @@ const guitarData = {
   ]
 };
 
-// Function to populate the table with guitar data
 function populateTable(filteredGuitars) {
   const tableBody = document.getElementById('guitar-table-body');
   tableBody.innerHTML = '';
@@ -26,10 +24,8 @@ function populateTable(filteredGuitars) {
   });
 }
 
-// Function to populate the model dropdown based on the selected type
 function populateModelDropdown(filteredGuitars) {
   const modelSelect = document.getElementById('guitar-model');
-  // Clear all options except the first one
   modelSelect.innerHTML = '<option value="">-- Select a model --</option>';
 
   filteredGuitars.forEach(guitar => {
@@ -40,7 +36,6 @@ function populateModelDropdown(filteredGuitars) {
   });
 }
 
-// Function to filter guitars based on the selected type
 function filterGuitars() {
   const guitarType = document.getElementById('guitar-type').value;
   let filteredGuitars = [];
@@ -56,11 +51,9 @@ function filterGuitars() {
   populateTable(filteredGuitars);
   populateModelDropdown(filteredGuitars);
 
-  // Clear the guitar details
   document.getElementById('guitar-details').style.display = 'none';
 }
 
-// Function to show details for the selected guitar model
 function showGuitarDetails() {
   const modelValue = document.getElementById('guitar-model').value;
   const detailsDiv = document.getElementById('guitar-details');
@@ -93,10 +86,7 @@ function showGuitarDetails() {
   }
 }
 
-// Make sure to call this function at page load
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize the table with all guitars
   populateTable(guitarData.guitars);
-  // Initialize the dropdown with all guitars
   populateModelDropdown(guitarData.guitars);
 });

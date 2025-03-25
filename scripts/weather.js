@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const apiKey = 'b3d2c4dace3b9aa57c38170417b7ae22';
   const city = 'Cozumel';
 
-  // Elements
   const currentTempElement = document.getElementById('current-temp');
   const currentHumidityElement = document.getElementById('current-humidity');
   const weatherConditionsElement = document.getElementById('weather-conditions');
@@ -11,12 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeAlertButton = document.getElementById('close-alert');
   const weatherAlert = document.getElementById('weather-alert');
 
-  // Close alert functionality
   closeAlertButton.addEventListener('click', () => {
     weatherAlert.style.display = 'none';
   });
 
-  // Fetch current weather data
   async function fetchCurrentWeather() {
     try {
       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
@@ -27,14 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = await response.json();
 
-      // Display current weather
       currentTempElement.textContent = data.main.temp.toFixed(1);
       currentHumidityElement.textContent = data.main.humidity;
 
-      // Update high temperature alert
       highTempMessage.textContent = `The high temperature today in Cozumel will be ${data.main.temp_max.toFixed(1)} degrees celsius`;
 
-      // Display weather conditions
       displayWeatherConditions(data.weather);
 
     } catch (error) {
@@ -45,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Fetch forecast data
   async function fetchForecast() {
     try {
       const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`);
@@ -56,12 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = await response.json();
 
-      // Get tomorrow's date
       const tomorrow = new Date();
       tomorrow.setDate(tomorrow.getDate() + 1);
       const tomorrowDate = tomorrow.toISOString().split('T')[0];
 
-      // Find forecast for tomorrow at 15:00 (3:00pm)
       const tomorrowForecast = data.list.find(item => {
         const itemDate = item.dt_txt.split(' ')[0];
         const itemTime = item.dt_txt.split(' ')[1];
@@ -80,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Display weather conditions with icons
   function displayWeatherConditions(weatherData) {
     weatherConditionsElement.innerHTML = '';
 
@@ -102,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initialize weather data
   fetchCurrentWeather();
   fetchForecast();
 });
