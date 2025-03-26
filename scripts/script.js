@@ -56,6 +56,5 @@ const resetInterval = () => {
   interval = setInterval(nextSlide, 5000);
 };
 
-// Initialize carousel
 showSlide(currentIndex);
 
