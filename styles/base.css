@@ -898,10 +898,10 @@ label {
 }
 
 .reservation-agreement-bg {
-  background-color: #DDD4D4;
-  border: 5px solid #8B4513;
+  background-color: #e7e7e7;
+  border: 5px solid gray;
   border-radius: 10px;
-  box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px #8B4513;
+  box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px gray;
   margin-bottom: 3rem;
 }
 
@@ -911,10 +911,10 @@ label {
 }
 
 .reservation-pricing-bg {
-  background-color: #B0C4DE;
-  border: 5px solid #8B4513;
+  background-color: #e7e7e7;
+  border: 5px solid gray;
   border-radius: 10px;
-  box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px #8B4513;
+  box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px gray;
 }
 
 .reservation-details-bg {

@@ -20,7 +20,6 @@ header {
   display: block;
   margin: 0 auto 2rem auto;
   width: 6rem;
-
 }
 
 #bus-name {
@@ -44,7 +43,7 @@ h2 {
 
 #gibson,
 #taylor {
-  background-color: rgb(182, 178, 178);
+  background-color: rgb(231, 231, 231);
   color: black;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -53,7 +52,7 @@ h2 {
 }
 
 #martin {
-  background-color: lightsteelblue;
+  background-color: #e7e7e7;
   color: black;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -67,7 +66,7 @@ h2 {
 #j16e,
 #T815e,
 #T855e {
-  background-color: rgb(221, 212, 212);
+  background-color: #cccccc;
   border: 10px groove gray;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -144,79 +143,12 @@ h1 {
   padding: 20px;
 }
 
-table {
-  width: 90%;
-  max-width: 800px;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-thead {
-  background-color: #1E3A5F;
-  color: white;
-  font-size: 1.1em;
-}
-
-td,
-th {
-  border: 1px solid rgb(182, 178, 178);
-  padding: 12px;
-  text-align: left;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: lightsteelblue;
-}
-
-tbody tr:nth-child(even) {
-  background-color: rgb(182, 178, 178);
-}
-
-tbody tr:hover {
-  background-color: #1E3A5F;
-  color: white;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  table {
-    width: 100%;
-  }
-
-  td,
-  th {
-    padding: 8px;
-  }
-}
-
-@media (min-width: 769px) {
-  table {
-    width: 95%;
-    max-width: 1200px;
-  }
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: lightsteelblue;
-  text-align: center;
-}
-
-h1 {
-  color: #1E3A5F;
-  padding: 20px;
-}
-
 .pricing-container-acoustic {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: lightsteelblue;
+  background-color: #e7e7e7;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -225,56 +157,6 @@ table {
   width: 90%;
   max-width: 800px;
   margin: 20px auto;
-  border: solid 2px rgb(121, 120, 120);
-  border-radius: 10px;
-  border-collapse: collapse;
-  background: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-thead {
-  background-color: #1E3A5F;
-  color: white;
-  font-size: 1.1em;
-}
-
-td,
-th {
-  border: 1px solid rgb(182, 178, 178);
-  padding: 12px;
-  text-align: left;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: lightsteelblue;
-}
-
-tbody tr:nth-child(even) {
-  background-color: rgb(182, 178, 178);
-}
-
-tbody tr:hover {
-  background-color: #1E3A5F;
-  color: white;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: lightsteelblue;
-  text-align: center;
-}
-
-h1 {
-  color: #1E3A5F;
-  padding: 20px;
-}
-
-table {
-  width: 90%;
-  max-width: 800px;
-  margin: 20px auto;
   border-collapse: collapse;
   background: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -294,11 +176,11 @@ th {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: lightsteelblue;
+  background-color: #e7e7e7;
 }
 
 tbody tr:nth-child(even) {
-  background-color: rgb(182, 178, 178);
+  background-color: #b1b1b1;
 }
 
 tbody tr:hover {
@@ -306,7 +188,10 @@ tbody tr:hover {
   color: white;
 }
 
-/* Responsive Design */
+footer {
+  margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
   table {
     width: 100%;

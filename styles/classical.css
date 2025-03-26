@@ -45,7 +45,7 @@ h2 {
 
 #gibson,
 #taylor {
-  background-color: lightsteelblue;
+  background-color: #e7e7e7;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   padding: 1rem;
@@ -53,7 +53,7 @@ h2 {
 }
 
 #martin {
-  background-color: rgb(182, 178, 178);
+  background-color: #e7e7e7;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   padding: 1rem;
@@ -66,7 +66,7 @@ h2 {
 #j16e,
 #T815e,
 #T855e {
-  background-color: rgb(221, 212, 212);
+  background-color: #cccccc;
   border: 10px groove gray;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -138,9 +138,7 @@ table {
   background: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: solid 2px rgb(121, 120, 120);
-  /* Moved from .pricing-container-classical */
   border-radius: 10px;
-  /* Moved from .pricing-container-classical */
 }
 
 thead {
@@ -157,11 +155,11 @@ th {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: lightsteelblue;
+  background-color: #e7e7e7;
 }
 
 tbody tr:nth-child(even) {
-  background-color: rgb(182, 178, 178);
+  background-color: #b1b1b1;
 }
 
 tbody tr:hover {
@@ -179,12 +177,15 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(182, 178, 178);
+  background-color: #e7e7e7;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive Design */
+footer {
+  margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
   table {
     width: 100%;
