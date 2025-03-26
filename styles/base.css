@@ -653,7 +653,6 @@ label {
   text-align: left;
 }
 
-/* Dark mode styles */
 .dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -1138,7 +1137,6 @@ label {
   margin: 0 auto;
 }
 
-/* Location Cards */
 .locations-grid {
   display: grid;
   grid-template-columns: 1fr;
