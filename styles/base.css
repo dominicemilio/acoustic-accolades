@@ -1360,7 +1360,7 @@ label {
 
 .dark-mode .contact-main-bg,
 .dark-mode .thankyou-main-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/acoustic-bg.jpg');
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/acoustic-bg.jpg'); */
 }
 
 .dark-mode .location-card,
