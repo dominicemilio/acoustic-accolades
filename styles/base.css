@@ -1241,8 +1241,8 @@ label {
 }
 
 .thankyou-main-bg {
-  /* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/acoustic-bg.jpg'); */
-  background-size: cover;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/hero-images/5.guitar-hero1.webp');
+  */ background-size: cover;
   background-position: center;
   padding: 3rem 1rem;
   min-height: 70vh;
@@ -1358,9 +1358,18 @@ label {
   background-color: #d0d0d0;
 }
 
+.message,
+.assistance {
+  text-align: center;
+}
+
+.shop-phone {
+  text-align: center;
+}
+
 .dark-mode .contact-main-bg,
 .dark-mode .thankyou-main-bg {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/acoustic-bg.jpg'); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-images/5.guitar-hero1.webp');
 }
 
 .dark-mode .location-card,
