@@ -36,10 +36,10 @@ dots.forEach((dot, index) =>
   })
 );
 
-let interval = setInterval(nextSlide, 5000);
+let interval = setInterval(nextSlide, 6000);
 const resetInterval = () => {
   clearInterval(interval);
-  interval = setInterval(nextSlide, 5000);
+  interval = setInterval(nextSlide, 6000);
 };
 
 showSlide(currentIndex);
