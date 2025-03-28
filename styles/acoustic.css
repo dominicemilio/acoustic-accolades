@@ -2,7 +2,7 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: #f5f5f5 !important;
   color: black;
 }
 
@@ -141,6 +141,10 @@ body {
 h1 {
   color: #1E3A5F;
   padding: 20px;
+}
+
+main {
+  background-color: #f5f5f5;
 }
 
 .pricing-container-acoustic {
