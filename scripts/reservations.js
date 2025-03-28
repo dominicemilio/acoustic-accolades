@@ -1,153 +1,24 @@
-const acousticGuitars = [
-  {
-    "brand": "Gibson",
-    "model": "Dove",
-    "type": "Acoustic 6-string",
-    "purchase_price": 3499,
-    "rental": {
-      "full_day": 50,
-      "weekly": 300,
-      "monthly": 1000
-    }
-  },
-  {
-    "brand": "Gibson",
-    "model": "SJ-200",
-    "type": "Acoustic 12-string",
-    "purchase_price": 5299,
-    "rental": {
-      "full_day": 70,
-      "weekly": 420,
-      "monthly": 1400
-    }
-  },
-  {
-    "brand": "Martin",
-    "model": "D50",
-    "type": "Acoustic 6-string",
-    "purchase_price": 3999,
-    "rental": {
-      "full_day": 55,
-      "weekly": 330,
-      "monthly": 1100
-    }
-  },
-  {
-    "brand": "Martin",
-    "model": "J16e",
-    "type": "Acoustic 12-string",
-    "purchase_price": 4599,
-    "rental": {
-      "full_day": 65,
-      "weekly": 390,
-      "monthly": 1300
-    }
-  },
-  {
-    "brand": "Taylor",
-    "model": "815e",
-    "type": "Acoustic 6-string",
-    "purchase_price": 3299,
-    "rental": {
-      "full_day": 45,
-      "weekly": 270,
-      "monthly": 900
-    }
-  },
-  {
-    "brand": "Taylor",
-    "model": "855e",
-    "type": "Acoustic 12-string",
-    "purchase_price": 4699,
-    "rental": {
-      "full_day": 60,
-      "weekly": 360,
-      "monthly": 1200
-    }
-  }
-];
+let allGuitars = [];
 
-const classicalGuitars = [
-  {
-    "brand": "Cordoba",
-    "model": "Esteso",
-    "type": "Classical 6-string",
-    "purchase_price": 2999,
-    "rental": {
-      "full_day": 40,
-      "weekly": 240,
-      "monthly": 800
-    }
-  },
-  {
-    "brand": "Cordoba",
-    "model": "Friederich",
-    "type": "Classical 6-string",
-    "purchase_price": 3899,
-    "rental": {
-      "full_day": 55,
-      "weekly": 330,
-      "monthly": 1100
-    }
-  },
-  {
-    "brand": "Ramirez",
-    "model": "Centenario",
-    "type": "Classical 6-string",
-    "purchase_price": 5199,
-    "rental": {
-      "full_day": 70,
-      "weekly": 420,
-      "monthly": 1400
-    }
-  },
-  {
-    "brand": "Ramirez",
-    "model": "Legado",
-    "type": "Classical 6-string",
-    "purchase_price": 29999,
-    "rental": {
-      "full_day": 410,
-      "weekly": 2460,
-      "monthly": 8200
-    }
-  },
-  {
-    "brand": "Takamine",
-    "model": "GC5-NAT",
-    "type": "Classical 6-string",
-    "purchase_price": 1199,
-    "rental": {
-      "full_day": 30,
-      "weekly": 180,
-      "monthly": 600
-    }
-  },
-  {
-    "brand": "Takamine",
-    "model": "GC6E-NAT",
-    "type": "Classical 6-string",
-    "purchase_price": 1699,
-    "rental": {
-      "full_day": 35,
-      "weekly": 210,
-      "monthly": 700
-    }
-  }
-];
+function fetchGuitars() {
+  fetch('data/guitars.json')
+    .then(response => response.json())
+    .then(data => {
+      allGuitars = data.guitars;
+      populateTable(allGuitars);
+      populateGuitarDropdown(allGuitars);
+    })
+    .catch(error => console.error('Error loading guitar data:', error));
+}
 
-const guitarData = {
-  guitars: [
-    ...acousticGuitars,
-    ...classicalGuitars
-  ]
-};
-
-function populateTable(filteredGuitars) {
+function populateTable(guitars) {
   const tableBody = document.getElementById('guitar-table-body');
+  if (!tableBody) {
+    console.error('Error: Element with ID "guitar-table-body" not found in the DOM.');
+    return;
+  }
   tableBody.innerHTML = '';
-
-  filteredGuitars.forEach(guitar => {
+  guitars.forEach(guitar => {
     const row = document.createElement('tr');
     row.innerHTML = `
       <td>${guitar.brand}</td>
@@ -162,126 +33,14 @@ function populateTable(filteredGuitars) {
   });
 }
 
-function populateModelDropdown(filteredGuitars) {
-  const modelSelect = document.getElementById('guitar-model');
-  modelSelect.innerHTML = '<option value="">-- Select a model --</option>';
-
-  filteredGuitars.forEach(guitar => {
-    const option = document.createElement('option');
-    option.value = `${guitar.brand}-${guitar.model}`;
-    option.textContent = `${guitar.brand} ${guitar.model} (${guitar.type})`;
-    modelSelect.appendChild(option);
-  });
-}
-
-function filterGuitars() {
-  const guitarType = document.getElementById('guitar-type').value;
-  let filteredGuitars = [];
-
-  if (guitarType === 'all') {
-    filteredGuitars = guitarData.guitars;
-  } else if (guitarType === 'acoustic') {
-    filteredGuitars = guitarData.guitars.filter(guitar => guitar.type.includes('Acoustic'));
-  } else if (guitarType === 'classical') {
-    filteredGuitars = guitarData.guitars.filter(guitar => guitar.type.includes('Classical'));
-  }
-
-  populateTable(filteredGuitars);
-  populateModelDropdown(filteredGuitars);
-
-  document.getElementById('guitar-details').style.display = 'none';
-}
-
-function showGuitarDetails() {
-  const modelValue = document.getElementById('guitar-model').value;
-  const detailsDiv = document.getElementById('guitar-details');
-
-  if (!modelValue) {
-    detailsDiv.style.display = 'none';
+function populateGuitarDropdown(guitars) {
+  const selectedGuitarSelect = document.getElementById('selected-guitar');
+  if (!selectedGuitarSelect) {
+    console.error('Error: Element with ID "selected-guitar" not found in the DOM.');
     return;
   }
-
-  const [brand, model] = modelValue.split('-');
-  const selectedGuitar = guitarData.guitars.find(
-    guitar => guitar.brand === brand && guitar.model === model
-  );
-
-  if (selectedGuitar) {
-    detailsDiv.innerHTML = `
-      <h3>${selectedGuitar.brand} ${selectedGuitar.model}</h3>
-      <p><strong>Type:</strong> ${selectedGuitar.type}</p>
-      <p><strong>Purchase Price:</strong> $${selectedGuitar.purchase_price}</p>
-      <p><strong>Rental Options:</strong></p>
-      <ul>
-        <li>Daily: $${selectedGuitar.rental.full_day}</li>
-        <li>Weekly: $${selectedGuitar.rental.weekly}</li>
-        <li>Monthly: $${selectedGuitar.rental.monthly}</li>
-      </ul>
-    `;
-    detailsDiv.style.display = 'block';
-  } else {
-    detailsDiv.style.display = 'none';
-  }
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  populateTable(guitarData.guitars);
-  populateModelDropdown(guitarData.guitars);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  populateGuitarDropdown();
-
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2, '0');
-  const dd = String(today.getDate()).padStart(2, '0');
-  const todayString = `${yyyy}-${mm}-${dd}`;
-  document.getElementById('rental-date').min = todayString;
-
-  const dropoffCheckbox = document.getElementById('dropoff');
-  const dropoffLocationContainer = document.getElementById('dropoff-location-container');
-
-  dropoffCheckbox.addEventListener('change', function () {
-    dropoffLocationContainer.style.display = this.checked ? 'block' : 'none';
-    if (!this.checked) {
-      document.getElementById('dropoff-location').value = '';
-    }
-  });
-
-  const guitarModelSelect = document.getElementById('guitar-model');
-  const selectedGuitarSelect = document.getElementById('selected-guitar');
-
-  guitarModelSelect.addEventListener('change', function () {
-    const selectedValue = this.value;
-    if (selectedValue) {
-      for (let i = 0; i < selectedGuitarSelect.options.length; i++) {
-        if (selectedGuitarSelect.options[i].value === selectedValue) {
-          selectedGuitarSelect.selectedIndex = i;
-          break;
-        }
-      }
-    }
-  });
-
-  const rentalForm = document.getElementById('rental-form');
-
-  rentalForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    alert('Thank you for your reservation! We will contact you shortly to confirm your booking.');
-
-    rentalForm.reset();
-    dropoffLocationContainer.style.display = 'none';
-  });
-});
-
-function populateGuitarDropdown() {
-  const selectedGuitarSelect = document.getElementById('selected-guitar');
   selectedGuitarSelect.innerHTML = '<option value="">-- Select a guitar --</option>';
-
-  guitarData.guitars.forEach(guitar => {
+  guitars.forEach(guitar => {
     const option = document.createElement('option');
     option.value = `${guitar.brand}-${guitar.model}`;
     option.textContent = `${guitar.brand} ${guitar.model} (${guitar.type}) - $${guitar.rental.full_day}/day`;
@@ -289,16 +48,47 @@ function populateGuitarDropdown() {
   });
 }
 
-const menuBtn = document.getElementById('menu-btn');
-const navList = document.getElementById('nav-list');
+document.addEventListener('DOMContentLoaded', function () {
+  fetchGuitars();
 
-menuBtn.addEventListener('click', () => {
-  navList.classList.toggle('open');
-  menuBtn.classList.toggle('active');
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const todayString = `${currentYear}-${mm}-${dd}`;
+  const rentalDateInput = document.getElementById('rental-date');
+  if (rentalDateInput) {
+    rentalDateInput.min = todayString;
+  }
 
-  if (menuBtn.classList.contains('active')) {
-    menuBtn.innerHTML = '&#10006;';
-  } else {
-    menuBtn.innerHTML = '&#9776;';
+  const dropoffCheckbox = document.getElementById('dropoff');
+  const dropoffLocationContainer = document.getElementById('dropoff-location-container');
+
+  if (dropoffCheckbox) {
+    dropoffCheckbox.addEventListener('change', function () {
+      if (dropoffLocationContainer) {
+        dropoffLocationContainer.style.display = this.checked ? 'block' : 'none';
+        if (!this.checked && document.getElementById('dropoff-location')) {
+          document.getElementById('dropoff-location').value = '';
+        }
+      }
+    });
+  }
+
+  const guitarModelSelect = document.getElementById('selected-guitar');
+
+  const rentalForm = document.getElementById('rental-form');
+
+  if (rentalForm) {
+    rentalForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      alert('Thank you for your reservation! We will contact you shortly to confirm your booking.');
+
+      rentalForm.reset();
+      if (dropoffLocationContainer) {
+        dropoffLocationContainer.style.display = 'none';
+      }
+    });
   }
 });

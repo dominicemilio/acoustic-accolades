@@ -78,35 +78,24 @@
             tear.</li>
         </ul>
       </div>
-      <div class="card reservation-pricing-bg">
-        <h2>Guitar Rental Pricing</h2>
-        <label for="guitar-type">Select Guitar Type:</label>
-        <select id="guitar-type" onchange="filterGuitars()">
-          <option value="all">All Guitars</option>
-          <option value="acoustic">Acoustic Guitars</option>
-          <option value="classical">Classical Guitars</option>
-        </select>
-        <label for="guitar-model">Select Guitar Model:</label>
-        <select id="guitar-model" onchange="showGuitarDetails()">
-          <option value="">-- Select a model --</option>
-        </select>
-        <div id="guitar-details" class="guitar-details reservation-details-bg"></div>
-        <table id="guitar-table">
-          <thead>
-            <tr>
-              <th>Brand</th>
-              <th>Model</th>
-              <th>Type</th>
-              <th>Purchase Price</th>
-              <th>Daily Rental</th>
-              <th>Weekly Rental</th>
-              <th>Monthly Rental</th>
-            </tr>
-          </thead>
-          <tbody id="guitar-table-body">
-          </tbody>
-        </table>
-      </div>
+      <div id="guitar-details" class="guitar-details reservation-details-bg"></div>
+      <h2 class="final-pricing">Guitar Pricing</h2>
+      <table id="guitar-table">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Purchase Price</th>
+            <th>Daily Rental</th>
+            <th>Weekly Rental</th>
+            <th>Monthly Rental</th>
+          </tr>
+        </thead>
+        <tbody id="guitar-table-body">
+        </tbody>
+      </table>
+    </div>
     </div>
     <div class="card reservation-form-bg">
       <h2 class="h2-reserve">Reserve Your Guitar</h2>
@@ -218,6 +207,7 @@
   </footer>
   <script defer src="./scripts/darkmode.js"></script>
   <script defer src="./scripts/reservations.js"></script>
+  <script defer src="./scripts/menu.js"></script>
 </body>
 
 </html>

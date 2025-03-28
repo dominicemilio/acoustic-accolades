@@ -1,6 +1,72 @@
 {
   "guitars": [
     {
+      "brand": "Gibson",
+      "model": "Dove",
+      "type": "Acoustic 6-string",
+      "purchase_price": 3499,
+      "rental": {
+        "full_day": 50,
+        "weekly": 300,
+        "monthly": 1000
+      }
+    },
+    {
+      "brand": "Gibson",
+      "model": "SJ-200",
+      "type": "Acoustic 12-string",
+      "purchase_price": 5299,
+      "rental": {
+        "full_day": 70,
+        "weekly": 420,
+        "monthly": 1400
+      }
+    },
+    {
+      "brand": "Martin",
+      "model": "D50",
+      "type": "Acoustic 6-string",
+      "purchase_price": 3999,
+      "rental": {
+        "full_day": 55,
+        "weekly": 330,
+        "monthly": 1100
+      }
+    },
+    {
+      "brand": "Martin",
+      "model": "J16e",
+      "type": "Acoustic 12-string",
+      "purchase_price": 4599,
+      "rental": {
+        "full_day": 65,
+        "weekly": 390,
+        "monthly": 1300
+      }
+    },
+    {
+      "brand": "Taylor",
+      "model": "815e",
+      "type": "Acoustic 6-string",
+      "purchase_price": 3299,
+      "rental": {
+        "full_day": 45,
+        "weekly": 270,
+        "monthly": 900
+      }
+    },
+    {
+      "brand": "Taylor",
+      "model": "855e",
+      "type": "Acoustic 12-string",
+      "purchase_price": 4699,
+      "rental": {
+        "full_day": 60,
+        "weekly": 360,
+        "monthly": 1200
+      }
+    },
+    {
       "brand": "Cordoba",
       "model": "Esteso",
       "type": "Classical 6-string",

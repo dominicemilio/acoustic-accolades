@@ -1,27 +1,3 @@
-const menuBtn = document.getElementById('menu-btn');
-const navList = document.getElementById('nav-list');
-
-if (menuBtn && navList) {
-  menuBtn.setAttribute('aria-expanded', 'false');
-
-  menuBtn.addEventListener('click', () => {
-    navList.classList.toggle('open');
-    menuBtn.classList.toggle('active');
-    const isExpanded = navList.classList.contains('open');
-    menuBtn.setAttribute('aria-expanded', isExpanded);
-  });
-
-  navList.addEventListener('click', (event) => {
-    if (event.target.tagName === 'A') {
-      navList.classList.remove('open');
-      menuBtn.classList.remove('active');
-      menuBtn.setAttribute('aria-expanded', 'false');
-    }
-  });
-} else {
-  console.warn("Hamburger menu button or nav list not found.");
-}
-
 document.addEventListener('DOMContentLoaded', () => {
 
   const carousels = document.querySelectorAll('.carousel');

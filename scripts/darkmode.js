@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateTable(tableSelector, darkModeEnabled) {
     const table = document.querySelector(tableSelector);
 
-    if (!table) return; // Exit if table not found
+    if (!table) return;
 
     if (darkModeEnabled) {
       table.style.color = 'white';
