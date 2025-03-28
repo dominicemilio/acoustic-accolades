@@ -13,10 +13,8 @@ function loadGuitarPrices(jsonFilePath, guitarType) {
           <td>${guitar.brand}</td>
           <td>${guitar.model}</td>
           <td>${guitar.type}</td>
-          <td>$${guitar.purchase_price}</td>
           <td>$${guitar.rental.full_day}</td>
           <td>$${guitar.rental.weekly}</td>
-          <td>$${guitar.rental.monthly}</td>
         `;
         tableBody.appendChild(row);
       });

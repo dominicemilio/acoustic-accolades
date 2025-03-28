@@ -4,132 +4,108 @@
       "brand": "Gibson",
       "model": "Dove",
       "type": "Acoustic 6-string",
-      "purchase_price": 3499,
       "rental": {
         "full_day": 50,
-        "weekly": 300,
-        "monthly": 1000
+        "weekly": 300
       }
     },
     {
       "brand": "Gibson",
       "model": "SJ-200",
       "type": "Acoustic 12-string",
-      "purchase_price": 5299,
       "rental": {
         "full_day": 70,
-        "weekly": 420,
-        "monthly": 1400
+        "weekly": 420
       }
     },
     {
       "brand": "Martin",
       "model": "D50",
       "type": "Acoustic 6-string",
-      "purchase_price": 3999,
       "rental": {
         "full_day": 55,
-        "weekly": 330,
-        "monthly": 1100
+        "weekly": 330
       }
     },
     {
       "brand": "Martin",
       "model": "J16e",
       "type": "Acoustic 12-string",
-      "purchase_price": 4599,
       "rental": {
         "full_day": 65,
-        "weekly": 390,
-        "monthly": 1300
+        "weekly": 390
       }
     },
     {
       "brand": "Taylor",
       "model": "815e",
       "type": "Acoustic 6-string",
-      "purchase_price": 3299,
       "rental": {
         "full_day": 45,
-        "weekly": 270,
-        "monthly": 900
+        "weekly": 270
       }
     },
     {
       "brand": "Taylor",
       "model": "855e",
       "type": "Acoustic 12-string",
-      "purchase_price": 4699,
       "rental": {
         "full_day": 60,
-        "weekly": 360,
-        "monthly": 1200
+        "weekly": 360
       }
     },
     {
       "brand": "Cordoba",
       "model": "Esteso",
       "type": "Classical 6-string",
-      "purchase_price": 2999,
       "rental": {
         "full_day": 40,
-        "weekly": 240,
-        "monthly": 800
+        "weekly": 240
       }
     },
     {
       "brand": "Cordoba",
       "model": "Friederich",
       "type": "Classical 6-string",
-      "purchase_price": 3899,
       "rental": {
         "full_day": 55,
-        "weekly": 330,
-        "monthly": 1100
+        "weekly": 330
       }
     },
     {
       "brand": "Ramirez",
       "model": "Centenario",
       "type": "Classical 6-string",
-      "purchase_price": 5199,
       "rental": {
         "full_day": 70,
-        "weekly": 420,
-        "monthly": 1400
+        "weekly": 420
       }
     },
     {
       "brand": "Ramirez",
       "model": "Legado",
       "type": "Classical 6-string",
-      "purchase_price": 29999,
       "rental": {
         "full_day": 410,
-        "weekly": 2460,
-        "monthly": 8200
+        "weekly": 2460
       }
     },
     {
       "brand": "Takamine",
       "model": "GC5-NAT",
       "type": "Classical 6-string",
-      "purchase_price": 1199,
       "rental": {
         "full_day": 30,
-        "weekly": 180,
-        "monthly": 600
+        "weekly": 180
       }
     },
     {
       "brand": "Takamine",
       "model": "GC6E-NAT",
       "type": "Classical 6-string",
-      "purchase_price": 1699,
       "rental": {
         "full_day": 35,
-        "weekly": 210,
-        "monthly": 700
+        "weekly": 210
       }
     }
   ]
