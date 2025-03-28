@@ -52,7 +52,7 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   padding: 1rem;
-  background-color: #1E3A5F;
+  background-color: #1e3a5f;
   color: white;
 }
 
@@ -103,7 +103,7 @@ nav ul {
   border-top: 2px solid white;
   display: none;
   flex-direction: column;
-  background-color: #1E3A5F;
+  background-color: #1e3a5f;
   position: absolute;
   top: 100%;
   left: 0;
@@ -137,7 +137,7 @@ nav ul.open {
 
 nav ul li a.active {
   font-weight: bold;
-  color: #FFD700;
+  color: #ffd700;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 5px 10px;
   border-radius: 5px;
@@ -253,7 +253,7 @@ nav ul li a.active {
 }
 
 footer {
-  background-color: #1E3A5F;
+  background-color: #1e3a5f;
   color: white;
   padding: 20px;
   text-align: center;
@@ -362,7 +362,7 @@ footer {
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 14px;
   width: 14px;
   left: 3px;
@@ -373,7 +373,7 @@ footer {
 }
 
 input:checked+.slider {
-  background-color: #FFD700;
+  background-color: #ffd700;
 }
 
 input:checked+.slider:before {
@@ -418,7 +418,7 @@ input:checked+.slider:before {
 }
 
 .weather-section h2 {
-  color: #1E3A5F;
+  color: #1e3a5f;
   margin-bottom: 1.5rem;
   font-family: 'Charm', cursive;
 }
@@ -543,7 +543,7 @@ label {
 .locations-container h2 {
   text-align: center;
   font-family: 'Charm', cursive;
-  color: #1E3A5F;
+  color: #1e3a5f;
   margin-bottom: 2rem;
 }
 
@@ -567,14 +567,14 @@ label {
 
 .location-card h3 {
   font-family: 'Charm', cursive;
-  color: #1E3A5F;
+  color: #1e3a5f;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
 .h3-location {
   font-family: 'Charm', cursive;
-  color: #1E3A5F;
+  color: #1e3a5f;
   font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -589,7 +589,7 @@ label {
 }
 
 .promotional-message {
-  background-color: #1E3A5F;
+  background-color: #1e3a5f;
   color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -617,7 +617,7 @@ label {
 .map-section h3,
 .weather-section h3 {
   font-family: 'Charm', cursive;
-  color: #1E3A5F;
+  color: #1e3a5f;
   margin-top: 0;
   margin-bottom: 1rem;
   text-align: center;
@@ -640,7 +640,7 @@ label {
 .forecast h4 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: #1E3A5F;
+  color: #1e3a5f;
 }
 
 .agreement-card {
@@ -664,21 +664,21 @@ label {
 
 .dark-mode header {
   background-color: #181818;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .dark-mode nav ul {
   background-color: #181818;
-  border-top: 2px solid #FFD700;
+  border-top: 2px solid #ffd700;
 }
 
 .dark-mode nav ul li a {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .dark-mode footer {
   background-color: #181818;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .dark-mode .hero-button {
@@ -699,7 +699,7 @@ label {
 }
 
 .dark-mode .weather-section h2 {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .dark-mode .current-weather,
@@ -714,7 +714,7 @@ label {
 .dark-mode .weather-section h3,
 .dark-mode .weather-info h4,
 .dark-mode .forecast h4 {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .dark-mode .location-card,
@@ -726,11 +726,11 @@ label {
 
 .dark-mode .promotional-message {
   background-color: #222;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .dark-mode #bus-name {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .dark-mode nav {
@@ -887,24 +887,24 @@ label {
 }
 
 .reservation-body-bg {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .reservation-main-bg {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   padding-top: 1rem;
   margin-top: -2rem;
 }
 
 .reservation-container-bg {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .reservation-agreement-bg {
   background-color: #e7e7e7;
   border: 5px solid gray;
   border-radius: 10px;
-  box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px gray;
+  box-shadow: 0 0 0 2px #f5deb3, 0 0 0 5px gray;
   margin-bottom: 3rem;
 }
 
@@ -916,7 +916,7 @@ label {
   background-color: #e7e7e7;
   border: 5px solid gray;
   border-radius: 10px;
-  box-shadow: 0 0 0 2px #F5DEB3, 0 0 0 5px gray;
+  box-shadow: 0 0 0 2px #f5deb3, 0 0 0 5px gray;
 }
 
 .reservation-details-bg {
@@ -959,14 +959,14 @@ label {
 
 .h2-reserve {
   font-family: 'Charm', cursive;
-  color: #1E3A5F;
+  color: #1e3a5f;
   margin-bottom: 1rem;
 }
 
 .h2-locations {
   font-family: 'Charm', cursive;
   background-color: #d4d4d4;
-  color: #1E3A5F;
+  color: #1e3a5f;
   margin-bottom: 1rem;
 }
 
@@ -1007,7 +1007,7 @@ label {
   gap: 0.5rem;
 }
 
-.checkbox-group input[type="checkbox"] {
+.checkbox-group input[type='checkbox'] {
   margin: 0;
   width: auto;
 }
@@ -1118,12 +1118,12 @@ label {
 }
 
 .dark-mode .h1-guitars {
-  color: #FFD700;
+  color: #ffd700;
   padding-bottom: 1rem;
 }
 
 #acoustic-main #classical-main {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -1240,7 +1240,9 @@ label {
 }
 
 .thankyou-main-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/hero-images/5.guitar-hero1.webp');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)),
+    url('../images/hero-images/5.guitar-hero1.webp');
   background-size: cover;
   background-position: center;
   padding: 3rem 1rem;
@@ -1368,7 +1370,8 @@ label {
 
 .dark-mode .contact-main-bg,
 .dark-mode .thankyou-main-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-images/5.guitar-hero1.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../images/hero-images/5.guitar-hero1.webp');
 }
 
 .dark-mode .location-card,
@@ -1411,4 +1414,56 @@ label {
 
 .dark-mode .contact-btn:hover {
   background-color: #555;
+}
+
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 400px) {
+  .table-wrapper {
+    overflow-x: hidden;
+  }
+
+  #guitar-table {
+    width: 100%;
+    min-width: 350px;
+    border-collapse: collapse;
+  }
+
+  #guitar-table th,
+  #guitar-table td {
+    padding: 8px;
+    word-wrap: break-word;
+    max-width: 70px;
+  }
+
+  #guitar-table th,
+  #guitar-table td {
+    padding: 3px;
+    font-size: 0.8rem;
+  }
+
+  #guitar-table th:first-child,
+  #guitar-table td:first-child {
+    max-width: 60px;
+  }
+
+  #guitar-table th:nth-child(2),
+  #guitar-table td:nth-child(2) {
+    max-width: 65px;
+  }
+
+  #guitar-table th:nth-child(3),
+  #guitar-table td:nth-child(3) {
+    max-width: 55px;
+  }
+
+  #guitar-table th:nth-child(4),
+  #guitar-table td:nth-child(4),
+  #guitar-table th:nth-child(5),
+  #guitar-table td:nth-child(5) {
+    max-width: 70px;
+  }
 }
