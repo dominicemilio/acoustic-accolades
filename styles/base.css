@@ -1242,7 +1242,7 @@ label {
 
 .thankyou-main-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/hero-images/5.guitar-hero1.webp');
-  */ background-size: cover;
+  background-size: cover;
   background-position: center;
   padding: 3rem 1rem;
   min-height: 70vh;
