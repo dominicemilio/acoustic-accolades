@@ -51,7 +51,8 @@ h2 {
 #taylor {
   background-color: #e7e7e7;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+    0 -5px 10px rgba(0, 0, 0, 0.5);
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -59,7 +60,8 @@ h2 {
 #martin {
   background-color: #e7e7e7;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+    0 -5px 10px rgba(0, 0, 0, 0.5);
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -72,7 +74,8 @@ h2 {
 #T855e {
   background-color: #cccccc;
   border: 10px groove gray;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+    0 -5px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -232,4 +235,18 @@ footer {
     padding: 6px;
     font-size: 0.9em;
   }
+}
+
+.styled-container {
+  background-color: #e7e7e7;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+    0 -5px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px !important;
+  padding-top: 20px !important;
+
+}
+
+.final-pricing {
+  margin-top: 20px;
+  padding-top: 10px;
 }
