@@ -147,6 +147,10 @@ main {
   background-color: #f5f5f5;
 }
 
+#guitar-details {
+  background-color: #e7e7e7;
+}
+
 .pricing-container-acoustic {
   display: flex;
   justify-content: center;
