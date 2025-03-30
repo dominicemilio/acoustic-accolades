@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dominic Emilio Clemence | Final Project - Acoustic Accolades | WDD230 Web Frontend Development</title>
+  <meta name="author" content="Dominic Emilio Clemence">
+  <meta name="description"
+    content="This is not a real website, it is an assignment by Dominic Emilio Clemence for the WDD 230 - Web Frontend Development course at BYU-Idaho.">
+  <meta property="og:title" content="Acoustic Accolades | WDD230">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dominicemilio.github.io/acoustic-accolades/images/acoustic-accolades.png">
+  <meta property="og:url" content="https://dominicemilio.github.io/acoustic-accolades/">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/medium.css" media="(min-width: 600px)">
+  <link rel="stylesheet" href="./styles/larger.css" media="(min-width: 1024px)">
+  <link rel="stylesheet" href="./styles/darkmode.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="weather-alert" class="weather-alert">
+    <p id="high-temp-message">The high temperature today in Cozumel will be loading... degrees celsius</p>
+    <button id="close-alert" aria-label="Close weather alert">×</button>
+  </div>
+  <header>
+    <div class="logo-container">
+      <img class="logo" src="./images/logo.png" alt="Guitar Logo">
+      <h1 id="bus-name">Acoustic Accolades</h1>
+    </div>
+
+    <nav>
+      <button id="menu-btn" aria-label="Toggle navigation menu">&#9776;</button>
+      <ul id="nav-list">
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./acoustic.html">Acoustic<br>Rentals</a></li>
+        <li><a href="./classical.html">Classical<br>Rentals</a></li>
+        <li><a href="./reservations.html">Reservations</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <div class="carousel-container">
+      <a href="reservations.html" class="hero-button" id="hero-button">Reserve Your Premium Guitar Now!</a>
+
+      <div class="carousel" id="carousel">
+        <div class="slide"><img src="./images/hero-images/3.guitar-group2.webp" alt="Hero image 3" loading="lazy"></div>
+        <div class="slide"><img src="./images/hero-images/4.carnival-caribbean.webp" alt="Hero image 4" loading="lazy">
+        </div>
+        <div class="slide"><img src="./images/hero-images/5.guitar-hero1.webp" alt="Hero image 5" loading="lazy"></div>
+        <div class="slide"><img src="./images/hero-images/8.QuintanaRoo.webp" alt="Hero image 8" loading="lazy"></div>
+        <div class="slide"><img src="./images/hero-images/9.sketch-design.webp" alt="Hero image 9" loading="lazy"></div>
+      </div>
+
+      <div class="nav-arrows">
+        <button type="button" id="prev" aria-label="Previous slide">&#10094;</button> <button type="button" id="next"
+          aria-label="Next slide">&#10095;</button>
+      </div>
+      <div class="dots" id="dots-container">
+      </div>
+    </div>
+    <section class="locations-container">
+      <h2>Our Guitar Shop Locations</h2>
+
+      <div class="location-cards">
+        <div class="location-card">
+          <h3>Playa Palancar Cozumel</h3>
+          <img src="./images/palancar.webp" alt="Playa Palancar Cozumel Store" class="location-image">
+          <p>Our beachfront guitar shop at Playa Palancar offers a serene environment to test out your ideal guitar
+            while enjoying the beautiful ocean views.</p>
+          <p>Hours: 9am-6pm Daily</p>
+          <p>Contact: (987) 123-4567</p>
+        </div>
+
+        <div class="location-card">
+          <h3>Punta Sur Eco Beach Park</h3>
+          <img src="./images/punta.webp" alt="Punta Sur Eco Beach Park Store" class="location-image">
+          <p>Our Punta Sur location is nestled in the ecological park, providing a natural backdrop for your musical
+            journey.</p>
+          <p>Hours: 10am-5pm Daily</p>
+          <p>Contact: (987) 765-4321</p>
+        </div>
+      </div>
+
+      <div class="promotional-message">
+        <p>Come and get your vacation guitar in either of our 2 locations so you can chill while playing your favorite
+          tunes. We carry Classical guitars by Cordoba, Ramirez, and Takamine. We also carry Acoustic guitars by Gibson,
+          Martin, and Taylor. You can either rent or buy, your choice!</p>
+      </div>
+
+      <div class="info-sections">
+        <section class="weather-section">
+          <h2>Current Weather in Cozumel</h2>
+          <div class="weather-container">
+            <div class="current-weather">
+              <div class="weather-info">
+                <h3>Current Conditions</h3>
+                <p>Temperature: <span id="current-temp"></span>°C</p>
+                <p>Humidity: <span id="current-humidity"></span>%</p>
+                <div id="weather-conditions"></div>
+              </div>
+            </div>
+            <div class="forecast">
+              <h3>Tomorrow's Forecast (3:00 PM)</h3>
+              <p>Temperature: <span id="forecast-temp"></span>°C</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-top">
+      <div class="our-brands">Our Brands</div>
+      <div class="brand-logos">
+        <img src="./images/cordoba_logo.svg" alt="Cordoba Logo">
+        <img src="./images/gibson_logo.svg" alt="Gibson Logo">
+        <img src="./images/martin_logo.svg" alt="Martin Logo">
+        <img src="./images/ramirez_logo.svg" alt="Ramirez Logo">
+        <img src="./images/takamine-logo.png" alt="Takamine Logo">
+        <img src="./images/taylor_logo.svg" alt="Taylor Logo">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copyright">&copy; <span id="current-year"></span> Acoustic Accolades Inc. All Rights Reserved</div>
+      <div class="footer-right">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"> <img
+            src="images/facebook-icon.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"> <img
+            src="images/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="./scripts/script.js"></script>
+  <script defer src="./scripts/darkmode.js"></script>
+  <script defer src="./scripts/weather.js"></script>
+  <script defer src="./scripts/menu.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

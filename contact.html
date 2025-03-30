@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acoustic Accolades Guitar - Contact Us</title>
+  <meta name="author" content="Dominic Emilio Clemence">
+  <meta name="description"
+    content="This is not a real website, it is an assignment by Dominic Emilio Clemence for the WDD 230 - Web Frontend Development course at BYU-Idaho.">
+  <meta property="og:title" content="Acoustic Accolades | WDD230">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dominicemilio.github.io/acoustic-accolades/images/acoustic-accolades.png">
+  <meta property="og:url" content="https://dominicemilio.github.io/acoustic-accolades/">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/acoustic.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/medium.css" media="(min-width: 600px)">
+  <link rel="stylesheet" href="./styles/larger.css" media="(min-width: 1024px)">
+  <link rel="stylesheet" href="./styles/darkmode.css">
+  <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="res-header-bg">
+    <div class="logo-container">
+      <img class="logo" src="./images/logo.png" alt="Guitar Logo" loading="lazy">
+      <div id="bus-name">Acoustic Accolades</div>
+    </div>
+
+    <nav class="res-nav-bg">
+      <button id="menu-btn">☰</button>
+      <ul id="nav-list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./acoustic.html">Acoustic<br>Rentals</a></li>
+        <li><a href="./classical.html">Classical<br>Rentals</a></li>
+        <li><a href="./reservations.html">Reservations</a></li>
+        <li><a href="./contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="h1-container">
+    <h1 class="h1-guitars" id="h1-guitars">Contact Us</h1>
+  </div>
+
+  <main class="contact-main-bg">
+    <div class="container-contact-container-bg">
+      <div class="card-location-cards">
+        <h2 class="h2-locations">Our Locations</h2>
+        <div class="locations-grid">
+          <div class="location-card" id="location-card-1">
+            <h3 class="h3-location">Playa Palancar</h3>
+            <div class="location-details">
+              <p><span class="detail-label">Hours:</span> 9am-6pm Daily</p>
+              <p><span class="detail-label">Email:</span> <a
+                  href="mailto:palancar@acousticaccolades.com">palancar@acousticaccolades.com</a></p>
+              <p><span class="detail-label">Phone:</span> (987) 123-4567</p>
+            </div>
+            <div class="location-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7647.0433160025!2d-87.02488213955988!3d20.354501526248658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e52556a8e288b%3A0x2d5c0327692afba8!2sPlaya%20Palancar!5e1!3m2!1sen!2sco!4v1742933640065!5m2!1sen!2sco"
+                height="250" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="location-card" id="location-card-2">
+            <h3 class="h3-location">Punta Sur Ecological Park</h3>
+            <div class="location-details">
+              <p><span class="detail-label">Hours:</span> 10am-5pm Daily</p>
+              <p><span class="detail-label">Email:</span> <a
+                  href="mailto:puntasur@acousticaccolades.com">puntasur@acousticaccolades.com</a></p>
+              <p><span class="detail-label">Phone:</span> (987) 765-4321</p>
+            </div>
+            <div class="location-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4672.860634937592!2d-86.96369891376364!3d20.29253666414374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4facc97b44f901%3A0x2716ce912f7da3f0!2sPunta%20Sur%20Eco%20Beach%20Park!5e1!3m2!1sen!2sco!4v1742933839054!5m2!1sen!2sco"
+                height="250" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card contact-form-card">
+        <h2>Send Us a Message</h2>
+        <form id="contact-form" action="thankyou.html" method="get">
+          <div class="form-group">
+            <label for="name">Full Name: <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="location">Preferred Location:</label>
+            <select id="location" name="location">
+              <option value="">-- Select a location --</option>
+              <option value="Playa Palancar">Playa Palancar</option>
+              <option value="Punta Sur">Punta Sur Ecological Park</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message: <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <p class="required-note"><span class="required">*</span> Required field</p>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="our-brands">Our Brands</div>
+      <div class="brand-logos">
+        <img src="./images/cordoba_logo.svg" alt="Cordoba Logo" loading="lazy">
+        <img src="./images/gibson_logo.svg" alt="Gibson Logo" loading="lazy">
+        <img src="./images/martin_logo.svg" alt="Martin Logo" loading="lazy">
+        <img src="./images/ramirez_logo.svg" alt="Ramirez Logo" loading="lazy">
+        <img src="./images/takamine-logo.png" alt="Takamine Logo" loading="lazy">
+        <img src="./images/taylor_logo.svg" alt="Taylor Logo" loading="lazy">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copyright">© Acoustic Accolades Inc. All Rights Reserved</div>
+      <div class="footer-right">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="./images/facebook-icon.png" alt="Facebook" class="social-icon" loading="lazy">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+          <img src="./images/linkedin-icon.png" alt="LinkedIn" class="social-icon" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="./scripts/darkmode.js"></script>
+  <script defer src="./scripts/menu.js"></script>
+</body>
+
+</html>

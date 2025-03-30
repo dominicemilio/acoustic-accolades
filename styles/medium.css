@@ -1,0 +1,96 @@
+@media (min-width: 600px) {
+
+  .logo {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-family: charm;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  nav ul li {
+    margin: 0 0.5rem;
+    text-align: left;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .carousel-container {
+    height: 60vh;
+  }
+
+  .hero-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Perfect center alignment */
+    background-color: rgb(180, 52, 52);
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Charm', cursive;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .brand-logos img {
+    width: 50px;
+    height: auto;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .brand-logo {
+    width: 10rem;
+    height: auto;
+  }
+
+  #taylor-logo {
+    width: 8rem;
+  }
+
+  .location-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .info-sections {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .map-section,
+  .weather-section {
+    flex: 1;
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

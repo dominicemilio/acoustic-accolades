@@ -1,0 +1,112 @@
+{
+  "guitars": [
+    {
+      "brand": "Gibson",
+      "model": "Dove",
+      "type": "Acoustic 6-string",
+      "rental": {
+        "full_day": 50,
+        "weekly": 300
+      }
+    },
+    {
+      "brand": "Gibson",
+      "model": "SJ-200",
+      "type": "Acoustic 12-string",
+      "rental": {
+        "full_day": 70,
+        "weekly": 420
+      }
+    },
+    {
+      "brand": "Martin",
+      "model": "D50",
+      "type": "Acoustic 6-string",
+      "rental": {
+        "full_day": 55,
+        "weekly": 330
+      }
+    },
+    {
+      "brand": "Martin",
+      "model": "J16e",
+      "type": "Acoustic 12-string",
+      "rental": {
+        "full_day": 65,
+        "weekly": 390
+      }
+    },
+    {
+      "brand": "Taylor",
+      "model": "815e",
+      "type": "Acoustic 6-string",
+      "rental": {
+        "full_day": 45,
+        "weekly": 270
+      }
+    },
+    {
+      "brand": "Taylor",
+      "model": "855e",
+      "type": "Acoustic 12-string",
+      "rental": {
+        "full_day": 60,
+        "weekly": 360
+      }
+    },
+    {
+      "brand": "Cordoba",
+      "model": "Esteso",
+      "type": "Classical 6-string",
+      "rental": {
+        "full_day": 40,
+        "weekly": 240
+      }
+    },
+    {
+      "brand": "Cordoba",
+      "model": "Friederich",
+      "type": "Classical 6-string",
+      "rental": {
+        "full_day": 55,
+        "weekly": 330
+      }
+    },
+    {
+      "brand": "Ramirez",
+      "model": "Centenario",
+      "type": "Classical 6-string",
+      "rental": {
+        "full_day": 70,
+        "weekly": 420
+      }
+    },
+    {
+      "brand": "Ramirez",
+      "model": "Legado",
+      "type": "Classical 6-string",
+      "rental": {
+        "full_day": 410,
+        "weekly": 2460
+      }
+    },
+    {
+      "brand": "Takamine",
+      "model": "GC5-NAT",
+      "type": "Classical 6-string",
+      "rental": {
+        "full_day": 30,
+        "weekly": 180
+      }
+    },
+    {
+      "brand": "Takamine",
+      "model": "GC6E-NAT",
+      "type": "Classical 6-string",
+      "rental": {
+        "full_day": 35,
+        "weekly": 210
+      }
+    }
+  ]
+}

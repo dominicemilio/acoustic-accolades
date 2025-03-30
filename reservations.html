@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acoustic Accolades Guitar Reservations</title>
+  <meta name="author" content="Dominic Emilio Clemence">
+  <meta name="description"
+    content="This is not a real website, it is an assignment by Dominic Emilio Clemence for the WDD 230 - Web Frontend Development course at BYU-Idaho.">
+  <meta property="og:title" content="Acoustic Accolades | WDD230">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dominicemilio.github.io/acoustic-accolades/images/acoustic-accolades.png">
+  <meta property="og:url" content="https://dominicemilio.github.io/acoustic-accolades/">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/acoustic.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/medium.css" media="(min-width: 600px)">
+  <link rel="stylesheet" href="./styles/larger.css" media="(min-width: 1024px)">
+  <link rel="stylesheet" href="./styles/darkmode.css">
+  <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="res-header-bg">
+    <div class="logo-container">
+      <img class="logo" src="./images/logo.png" alt="Guitar Logo" loading="lazy">
+      <div id="bus-name">Acoustic Accolades</div>
+    </div>
+
+    <nav class="res-nav-bg">
+      <button id="menu-btn">&#9776;</button>
+      <ul id="nav-list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./acoustic.html">Acoustic<br>Rentals</a></li>
+        <li><a href="./classical.html">Classical<br>Rentals</a></li>
+        <li><a href="./reservations.html" class="active">Reservations</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="reservation-main-bg">
+    <div class="container-reservation-intro">
+      <h1 class="h1-guitars" id="h1-guitars">Reserve Your Guitar Today</h1>
+      <div class="agreement-card reservation-agreement-bg">
+        <h2>Guitar Rental Services and Agreements</h2>
+        <ul>
+          <li>A $50 security deposit, which will be fully refunded upon return, is required to confirm all reservations.
+          </li>
+          <li>A valid government-issued photo ID, such as a driver's license or passport, is required at the time of
+            rental.</li>
+          <li>All renters must be at least 18 years old, with proof of age, to be able to rent a guitar from our shop.
+          </li>
+          <li>Enjoy unlimited playtime during the entire rental period, allowing for extensive practice and performance.
+          </li>
+          <li>Basic liability coverage, protecting against accidental damage, is automatically included with each rental
+            agreement.</li>
+          <li>Comprehensive damage protection plans, offering enhanced security, are available for purchase at an
+            additional cost.</li>
+          <li>Free delivery of guitars to hotels or Airbnbs is provided for rental periods of two or more consecutive
+            days.</li>
+          <li>Payment methods accepted include cash, major credit cards, and widely accepted debit cards for your
+            convenience.</li>
+          <li>Guitars may be conveniently returned to either one of our two rental locations during our normal business
+            hours.</li>
+          <li>Guitars must be returned in the same excellent condition as they were received, barring normal wear and
+            tear.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-reservation-pricing">
+      <h2 class="final-pricing">Guitar Pricing</h2>
+      <div class="table-wrapper">
+        <table id="guitar-table">
+          <thead>
+            <tr>
+              <th>Brand</th>
+              <th>Model</th>
+              <th>Type</th>
+              <th>Daily Rental</th>
+              <th>Weekly Rental</th>
+            </tr>
+          </thead>
+          <tbody id="guitar-table-body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card reservation-form-bg">
+      <h2 class="h2-reserve">Reserve Your Guitar</h2>
+      <form id="rental-form" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-section">
+            <h3>Customer Information</h3>
+            <div class="form-group">
+              <label for="fullname">Full Name: <span class="required">*</span></label>
+              <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email: <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number: <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="location">Home State/Country: <span class="required">*</span></label>
+              <input type="text" id="location" name="location" required>
+            </div>
+          </div>
+          <div class="form-section">
+            <h3>Rental Details</h3>
+            <div class="form-group">
+              <label for="selected-guitar">Selected Guitar: <span class="required">*</span></label>
+              <select id="selected-guitar" name="selected-guitar" required>
+                <option value="">-- Select a guitar --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rental-date">Pickup Date: <span class="required">*</span></label>
+              <input type="date" id="rental-date" name="rental-date" required>
+            </div>
+            <div class="form-group">
+              <label for="rental-period">Rental Period: <span class="required">*</span></label>
+              <select id="rental-period" name="rental-period" required>
+                <option value="">-- Select period --</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </div>
+            <div class="form-group" id="rental-quantity-container">
+              <label for="rental-quantity">Number of Days/Weeks/Months: <span class="required">*</span></label>
+              <input type="number" id="rental-quantity" name="rental-quantity" min="1" required>
+            </div>
+          </div>
+
+          <div class="form-section full-width">
+            <h3>Special Accommodations</h3>
+            <div class="form-group">
+              <label for="dropoff">Need Guitar Delivery?</label>
+              <div class="checkbox-group">
+                <input type="checkbox" id="dropoff" name="dropoff">
+                <span>Yes, please deliver to my location</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" id="dropoff-location-container" style="display: none;">
+            <label for="dropoff-location">Delivery Address:</label>
+            <input type="text" id="dropoff-location" name="dropoff-location"
+              placeholder="Hotel/Airbnb name and address">
+          </div>
+          <div class="form-group">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="form-section full-width">
+          <div class="form-submit">
+            <p class="required-note"><span class="required">*</span> Required field</p>
+            <div class="terms-checkbox">
+              <input type="checkbox" id="terms" name="terms" required>
+              <label for="terms">I agree to the rental terms and conditions <span class="required">*</span></label>
+            </div>
+            <button type="submit" class="submit-btn">Reserve Now</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="footer-reserve">
+    <div class="footer-top">
+      <div class="our-brands">Our Brands</div>
+      <div class="brand-logos">
+        <img src="./images/cordoba_logo.svg" alt="Cordoba Logo" loading="lazy">
+        <img src="./images/gibson_logo.svg" alt="Gibson Logo" loading="lazy">
+        <img src="./images/martin_logo.svg" alt="Martin Logo" loading="lazy">
+        <img src="./images/ramirez_logo.svg" alt="Ramirez Logo" loading="lazy">
+        <img src="./images/takamine-logo.png" alt="Takamine Logo" loading="lazy">
+        <img src="./images/taylor_logo.svg" alt="Taylor Logo" loading="lazy">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copyright">&copy; Acoustic Accolades Inc. All Rights Reserved</div>
+      <div class="footer-right">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="./images/facebook-icon.png" alt="Facebook" class="social-icon" loading="lazy">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+          <img src="./images/linkedin-icon.png" alt="LinkedIn" class="social-icon" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script defer src="./scripts/darkmode.js"></script>
+  <script defer src="./scripts/reservations.js"></script>
+  <script defer src="./scripts/menu.js"></script>
+</body>
+
+</html>
