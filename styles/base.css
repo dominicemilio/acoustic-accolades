@@ -294,6 +294,11 @@ footer {
   transition: transform 0.3s ease;
 }
 
+#takamine-logo {
+  width: 100px !important;
+  height: 133px !important;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -855,6 +860,16 @@ label {
   .logo {
     width: 100px;
     margin: 0 10px 0 15px;
+  }
+
+  #takamine {
+    width: 67px !important;
+    height: 50px !important;
+  }
+
+  #gibson-logo-light {
+    width: 160px !important;
+    height: 166px !important;
   }
 
   h1 {

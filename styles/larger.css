@@ -50,6 +50,11 @@
     transition: transform 0.3s ease;
   }
 
+  #takamine {
+    width: 133px;
+    height: 100px;
+  }
+
   .brand {
     display: flex;
     flex-wrap: wrap;
