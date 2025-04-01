@@ -867,9 +867,14 @@ label {
     height: 50px !important;
   }
 
-  #gibson-logo-light {
+  #cordoba-logo-light {
     width: 160px !important;
     height: 166px !important;
+  }
+
+  #gibson-logo-light {
+    width: 150px !important;
+    height: 95px !important;
   }
 
   h1 {
